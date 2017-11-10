@@ -17,7 +17,7 @@ const Events = props => (
     <div style={styles.container}>
       <h3>
         <a href="#">
-          9 Nov 2017 - Laboratoria Developers Meetup Nov 2017 @ Laboratoria Lima
+          10 Nov 2017 - Laboratoria Developers Meetup Nov 2017 @ Laboratoria Lima
         </a>
       </h3>
       <ul>
