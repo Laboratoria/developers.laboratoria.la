@@ -11,6 +11,7 @@ body {
   color: #777;
   padding: 5%;
   max-width: 1240px;
+  margin: 0 auto;
 }
 
 h1, h2 {
