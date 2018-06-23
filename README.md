@@ -1,42 +1,105 @@
-# Laboratoria Developers Chapter
+# Laboratoria Developers
 
-> This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Laboratoria's DevsChapter is an online community made up of all de the
+developers that work with us. That includes any Laboratorian that fits the
+developer profile: _coches_, _developers_ working on software products, content
+contributors, ...
 
-En este repo prodrás encontrar toda la información necesaria para involucrarte
-en el Chapter de desarrolladorxs de Laboratoria.
+As part of the team at Laboratoria, we invite you to familiarise yourself with
+our [digital ettiquette](https://github.com/Laboratoria/etiquette).
 
-## Recursos
+## Resources
 
-Las principales vías de comunicación del chapter son:
+The main channels of communication are:
 
-* Por el canal [#developers en Slack de Laboratoria](https://laboratoriala.slack.com/messages/C7TE6F4G7/)
-* Por email a [developers@laboratoria.la](mailto:developers@laboratoria.la)
-* A través de los issues de GitHub en el repo relevante
+* The [#developers channel Laboratoria's Slack](https://laboratoriala.slack.com/messages/C7TE6F4G7/)
+* The [DevsChapter category on our forum at community.laboratoria.la](http://community.laboratoria.la/c/devs-chapter)
+* The [repos under the Laboratoria org on GitHub](https://github.com/Laboratoria)
+  (repos, projects, issues, milestones, ...)
+* The [developers blog on Medium](https://medium.com/laboratoria-how-to)
+* The [YouTube channel](https://www.youtube.com/channel/UCuWmQYAvytwSl6tqjOxV5Ow)
+* The mailing list ([developers@laboratoria.la](mailto:developers@laboratoria.la))
 
-## Productos
+## Rituals
 
-Repos Open Source:
+### Weekly/monthly hangouts
 
-| Producto |  Manager  | Descripción |
+Announced in the [DevsChapter category on our forum at community.laboratoria.la](http://community.laboratoria.la/c/devs-chapter).
+
+Alternate between Wednesdays 1pm and Fridays 9am (Lima time).
+
+### Office hours
+
+Monday and thursday 4-6pm (Lima time).
+
+### Contributing
+
+Issues tagged `help-wanted`
+
+
+
+## Products
+
+### Open Source
+
+| Product |  Manager  | Description |
 |----------|-----------|-------------|
-| [curricula-js](https://github.com/Laboratoria/curricula-js) | Lupo Montero, Iván Medina | Curricula open source de Javascript |
-| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | Lalo González | Curricula open source de UX |
-| [curricula-mobile](https://github.com/Laboratoria/curricula-mobile) | Lupo Montero | Curricula open source de desarrollo móvil |
+| [curricula-js](https://github.com/Laboratoria/curricula-js) | Lupo Montero, Iván Medina | Bootcamp Curriculum (JavaScript)
+| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | Lalo González | Bootcamp Curriculum (UX)
+| [course-parser](https://github.com/Laboratoria/course-parser) | Lupo Montero | CLi used to process curriculum topics in Markdown format
+| [firemin](firemin) | Lupo Montero | Firebase/Firestore extra CLI features
+| [mdlint](mdlint) | Lupo Montero | Markdown linter (CLI)
 
-Repos privados:
+### Private repos
 
-| Producto |  Manager  | Descripción |
+| Product |  Manager  | Description |
 |----------|-----------|-------------|
-| [course-parser](https://github.com/Laboratoria/course-parser) | Lupo Montero | Herramienta para convertir cursos desarrollados en currículas en JSON |
-| [LMS](https://github.com/Laboratoria/lms.laboratoria.la) | Diego Velez | Interfaz que usan las estudiantes para acceder a los cursos |
-| [Talento](https://github.com/Laboratoria/talento.laboratoria.la) | Andrea Lamas | Aplicación que usa inserción para colocar talento |
-| [API](https://github.com/Laboratoria/api.laboratoria.la) | Diego Velez | Repositorio con todas las cloud functions que exponen data a terceros |
-| [Admin](https://github.com/Laboratoria/admin) | Lupo Montero | Herramienta de linea de comandos para ejecutar tareas comunes con los productos |
-| [Developers](https://github.com/Laboratoria/developers) | Lupo Montero | Repositorio del chaper de desarrolladorxs |
-| [Styleguide](#) | Herman Marin | Proyecto con todos los estilos de laboratoria |
-| [Dashboard](#) | Diego Velez | Producto para acceder a la información de operaciones (No implementado aún) |
-| [Seleccion](#) | Daniela Sarzosa | Producto de selección (No implementado aún) |
+| [api.laboratoria.la](https://github.com/Laboratoria/api.laboratoria.la) | Diego Velez, Lupo Montero | HTTP JSON API
+| [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la) | Diego Velez, Lupo Montero | Learning Management System (LMS)
+| [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la) | Andrea Lamas | Job Placemente App
+| [Admin](https://github.com/Laboratoria/admin) | Lupo Montero | Laboratoria Admin CLI
+| [Developers](https://github.com/Laboratoria/developers) | Lupo Montero | DevsChapter website
 
-## Conoce a los developers
+## Stack
 
-[Developers Team en GitHub](https://github.com/orgs/Laboratoria/teams/developers/members)
+## Core
+
+* JavaScript (E6, ES7, ES8)
+* Node / NPM / Yarn
+* Git + GitHub
+
+## Backend
+
+* Firebase (Firestore)
+
+## Frontend
+
+* Redux
+* React
+* Material UI
+
+## Testing and CI
+
+* ESLint
+* jest / mocha / chai
+* Travis CI
+
+## Coding standards
+
+[ wip ]
+
+* JavaScript
+* HTML
+* CSS
+* Markdown
+* Shell/Bash
+
+## Contributing
+
+[ wip ]
+
+## Team
+
+[Developers Team on GitHub](https://github.com/orgs/Laboratoria/teams/developers/members)
+
+## Code of conduct
