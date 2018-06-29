@@ -1,12 +1,12 @@
 # Laboratoria Developers
 
-Laboratoria's DevsChapter is an online community made up of all de the
+Laboratoria's DevsChapter is an online community made up of all the
 developers that work with us. That includes any Laboratorian that fits the
-developer profile: _coches_, _developers_ working on software products, content
+developer profile: _coaches_, _developers_ working on software products, content
 contributors, ...
 
 As part of the team at Laboratoria, we invite you to familiarise yourself with
-our [digital ettiquette](https://github.com/Laboratoria/etiquette).
+our [digital etiquette](https://github.com/Laboratoria/etiquette).
 
 ## Resources
 
