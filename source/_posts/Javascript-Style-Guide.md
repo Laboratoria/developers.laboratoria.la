@@ -1,5 +1,6 @@
 ---
 title: Javascript Style Guide
+desc: A mostly reasonable approach to JavaScript
 date: 2018-07-13 13:55:55
 categories: code-standards
 permalink: javascript-style-guide

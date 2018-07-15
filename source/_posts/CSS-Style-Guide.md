@@ -1,5 +1,6 @@
 ---
 title: CSS Style Guide
+desc: A mostly reasonable approach to CSS and Sass
 date: 2018-07-12 10:13:20
 categories: code-standards
 permalink: css-style-guide

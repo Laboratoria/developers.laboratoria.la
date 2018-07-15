@@ -1,5 +1,6 @@
 ---
 title: React/JSX Style Guide
+desc: A mostly reasonable approach to React and JSX
 date: 2018-07-15 15:18:08
 categories: code-standards
 permalink: react-jsx-style-guide
