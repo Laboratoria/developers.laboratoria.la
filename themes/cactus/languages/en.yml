@@ -1,9 +1,10 @@
 nav:
   home: Home
-  about: About
-  articles: Writing
-  projects: Projects
-  search: Search
+  coding: Code Standards
+  team: Team
+  etiquette: Etiquette
+  conduct: Conduct
+  help: Help us
 
 footer:
   copyright: Copyright
