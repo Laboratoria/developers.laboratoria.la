@@ -15,12 +15,11 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
+  coding: /coding/
   team: https://github.com/orgs/Laboratoria/teams/developers/members
   etiquette: /etiquette
-  coding: /coding/
-  contributing: /contributing
-  conduct: http://confcodeofconduct.com/
-
+  conduct: http://confcodeofconduct.com/  
+  help: /help-us/
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names 
