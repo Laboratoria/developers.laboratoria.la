@@ -6,9 +6,6 @@ categories: code-standards
 permalink: javascript-style-guide
 ---
 
-# Laboratoria Javascript Style Guide, forked based Airbnb JavaScript Style Guide() {
-
-
 ## Table of Contents
 
   1. [Types](#Types)

@@ -6,10 +6,6 @@ categories: code-standards
 permalink: css-style-guide
 ---
 
-# Laboratoria CSS / Sass Styleguide
-
-*A mostly reasonable approach to CSS and Sass*
-
 ## Table of Contents
 
 1. [Terminology](#terminology)
