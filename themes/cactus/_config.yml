@@ -19,7 +19,7 @@ nav:
   team: https://github.com/orgs/Laboratoria/teams/developers/members
   etiquette: /etiquette
   conduct: http://confcodeofconduct.com/  
-  help: /help-us/
+  contributing: /contributing/
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names 
@@ -39,8 +39,8 @@ social_links:
 #   - show_all_posts: whether to show all available posts.
 #   - post_count: whether to show only the x most recent posts.
 posts_overview:
-  show_all_posts: false
-  post_count: 5
+  show_all_posts: true
+  post_count: 10
 
 
 ##############################################################################
