@@ -13,9 +13,9 @@ permalink: stack
 * Node.js / NPM / Yarn
 * CLI
 * Git 
-    - All our work and projects of our organization are located on *Github* and our repositories must use these [good practice guidelines](https://hungry-borg-b29086.netlify.com/coding/)
-    and must be well-documented.
-
+    - All our work and projects of our organization are located on *Github* and our repositories
+     must use these [good practice guidelines](https://hungry-borg-b29086.netlify.com/coding/) and must be well-documented.
+     
 ## Backend
 
 * Firebase (Firestore).

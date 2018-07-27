@@ -15,7 +15,7 @@ Time is of the essence, and communication can be time consuming. In order to
 prevent headaches, misunderstandings and reduce communication issues, we ask
 all team members and contributors to abide by a set conventions outlined here.
 
-This document is intended for all Laboratorians, not just developers :wink:
+**This document is intended for all Laboratorians, not just developers :wink:**
 
 ***
 
