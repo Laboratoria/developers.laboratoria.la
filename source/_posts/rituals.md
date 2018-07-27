@@ -21,4 +21,4 @@ Office hours can be proposed by everyone in favor to help with our colleagues.
 
 * Issues tagged `help-wanted`.
 
-* [Our contributing Wiki](https://github.com/Laboratoria/curricula-js/wiki/Colabora:__blank) 
+* [Our contributing Wiki](https://github.com/Laboratoria/curricula-js/wiki/Colabora) 
