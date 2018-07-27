@@ -8,18 +8,18 @@ permalink: github-workflow
 
 ## Workflow
 
-Currently there are two type of projets, some are in production stage and other projects in early stage.
+Currently, there are two type of projects, some are in production stage and other in the early stage.
 
-### Projects in Production 
+### Projects in Production
 
-For projects that are in production, that's means projects that have a scheduled release live cycle, we could work with Git Flow:
+For projects that are in production, that means projects that have a scheduled release live cycle, we could work with Git Flow:
 
 [Learn Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) *by Atlassian*
 
 
 ### Projects in Early stage
 
-For project that are in early stage, that's means not alredy in production, we could work with Feature Branch Workflow:
+For projects that is in the early stage, that means not already in production, we could work with Feature Branch Workflow:
 
 [learn Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) *by Atlassian*
 
