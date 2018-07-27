@@ -17,14 +17,14 @@ tags:
 
 ## Backend
 
-* Firebase (Firestore)
+* Firebase (Firestore).
 
 ## Frontend
 
 * React
 * Redux
 * Material UI (CSS frameworks as Materialize.css).
-* Babel.js
+* Babel.js/ Webpack
 * HTML5 & CSS3
 
 ## Testing and CI
