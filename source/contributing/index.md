@@ -9,6 +9,8 @@ date: 2018-07-06 15:21:01
 
 Hexo is it's fast, simple & powerful blog framework with Markdown support written in Node.
 
+## Working with Hexo
+
 **Install dependencies**
 
 ```shell
@@ -35,14 +37,6 @@ $ hexo server --watch
 
 Se the full documentation [here](https://hexo.io/).
 
-### First
+## How to contribute
 
-You need to create a new branch with a brif and clear name, follow the exemples:
-
-`feature/new-header`
-`fix/footer`
-`new/theme`
-
-### Second
-
-Create a pull request, and done! 
+First fork this project, then create a [branch](/code-standards/github-workflow/#Branch-naming-conventions)  and finally send a pull request.

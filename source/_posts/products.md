@@ -2,7 +2,7 @@
 title: Laboratoria's Products
 desc: Our products
 date: 2018-07-06 15:51:18
-tags:
+categories: about
 ---
 
 ## We have many products that help us in our Bootcamp
