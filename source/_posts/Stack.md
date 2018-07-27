@@ -7,20 +7,26 @@ permalink: stack
 ---
 
 ## Core
+### Technologies which every developer at Laboratoria must use.
 
-* JavaScript (E6, ES7, ES8)
-* Node / NPM / Yarn
-* Git + GitHub
+* JavaScript (ES6, ES7, ES8)
+* Node.js / NPM / Yarn
+* CLI
+* Git 
+    - All our work and proyects of our organization are located on *Github* and our repositories must use this [good practice guidelines](https://hungry-borg-b29086.netlify.com/coding/)
+    and must be well-documented.
 
 ## Backend
 
-* Firebase (Firestore)
+* Firebase (Firestore).
 
 ## Frontend
 
-* Redux
 * React
-* Material UI
+* Redux
+* Material UI (CSS frameworks as Materialize.css).
+* Babel.js/ Webpack
+* HTML5 & CSS3
 
 ## Testing and CI
 
