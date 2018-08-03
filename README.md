@@ -63,7 +63,8 @@ HTTP JSON API
 
 Learning Management System (LMS)
 
-* PM: [@chamodev](https://github.com/chamodev)
+* PMs: [@chamodev](https://github.com/chamodev), [@danielasarzosa](https://github.com/danielasarzosa)
+  (admission), [@claudiaalf](https://github.com/claudiaalf) (l4b)
 * Tech lead: [@ivandevp](https://github.com/ivandevp)
 * Devs: [@FabianBravoA](https://github.com/FabianBravoA), [@MaiaRojas](https://github.com/MaiaRojas),
   [@arun1595](https://github.com/arun1595), [@AnaSalazar](https://github.com/AnaSalazar)
