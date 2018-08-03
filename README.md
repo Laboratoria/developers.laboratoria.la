@@ -47,8 +47,8 @@ We tag issues as `help-wanted` :wink:
 | [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@ivandevp](https://github.com/ivandevp), [@merunga](https://github.com/merunga) | Bootcamp Curriculum (JavaScript)
 | [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX)
 | [course-parser](https://github.com/Laboratoria/course-parser) | [@lupomontero](https://github.com/lupomontero), [@FabianBravoA](https://github.com/FabianBravoA) | CLi used to process curriculum topics in Markdown format
-| [firemin](firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
-| [mdlint](mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
+| [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
+| [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
 
 ### Private repos
 
