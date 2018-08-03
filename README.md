@@ -16,7 +16,7 @@ The main channels of communication are:
 * The [DevsChapter category on our forum at community.laboratoria.la](http://community.laboratoria.la/c/devs-chapter)
 * The [repos under the Laboratoria org on GitHub](https://github.com/Laboratoria)
   (repos, projects, issues, milestones, ...)
-* The [developers blog on Medium](https://medium.com/laboratoria-how-to)
+* The [developers blog on Medium](https://medium.com/laboratoria-developers)
 * The [YouTube channel](https://www.youtube.com/channel/UCuWmQYAvytwSl6tqjOxV5Ow)
 * The mailing list ([developers@laboratoria.la](mailto:developers@laboratoria.la))
 
@@ -30,9 +30,9 @@ Alternate between Wednesdays 1pm and Fridays 9am (Lima time).
 
 ### Office hours
 
-* @lupomontero: Monday and thursday 4-6pm (Lima time).
-* @ivandevp: ?
-* @FabianBravoA: ?
+* [@lupomontero](https://github.com/lupomontero): Monday and thursday 4-6pm (Lima time).
+* [@ivandevp](https://github.com/ivandevp): ?
+* [@FabianBravoA](https://github.com/FabianBravoA): ?
 
 ### Contributing
 
@@ -42,13 +42,13 @@ We tag issues as `help-wanted` :wink:
 
 ### Open Source
 
-| Product |  Manager  | Description |
+| Product |  Maintainers  | Description |
 |----------|-----------|-------------|
-| [curricula-js](https://github.com/Laboratoria/curricula-js) | @lupomontero @ivandevp | Bootcamp Curriculum (JavaScript)
-| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | @lalogf | Bootcamp Curriculum (UX)
-| [course-parser](https://github.com/Laboratoria/course-parser) | @lupomontero | CLi used to process curriculum topics in Markdown format
-| [firemin](firemin) | @lupomontero | Firebase/Firestore extra CLI features
-| [mdlint](mdlint) | @lupomontero | Markdown linter (CLI)
+| [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@ivandevp](https://github.com/ivandevp), [@merunga](https://github.com/merunga) | Bootcamp Curriculum (JavaScript)
+| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX)
+| [course-parser](https://github.com/Laboratoria/course-parser) | [@lupomontero](https://github.com/lupomontero), [@FabianBravoA](https://github.com/FabianBravoA) | CLi used to process curriculum topics in Markdown format
+| [firemin](firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
+| [mdlint](mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
 
 ### Private repos
 
@@ -56,38 +56,43 @@ We tag issues as `help-wanted` :wink:
 
 HTTP JSON API
 
-* PM: @diegovelezg, @lupomontero
-* Tech lead: @lupomontero
+* PM: @diegovelezg, [@lupomontero](https://github.com/lupomontero)
+* Tech lead: [@lupomontero](https://github.com/lupomontero)
 
 #### [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
 
 Learning Management System (LMS)
 
-* PM: @chamodev
-* Tech lead: @ivandevp
-* Devs: @MaiaRojas, @arun1595
+* PM: [@chamodev](https://github.com/chamodev)
+* Tech lead: [@ivandevp](https://github.com/ivandevp)
+* Devs: [@FabianBravoA](https://github.com/FabianBravoA), [@MaiaRojas](https://github.com/MaiaRojas),
+  [@arun1595](https://github.com/arun1595), [@AnaSalazar](https://github.com/AnaSalazar)
 
 #### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
 
 Job Placemente App
 
-* PM: @andreamarianalm
-* Tech lead: @gmoura
-* Devs: @RuthMeryCardenas
+* PM: [@andreamarianalm](https://github.com/andreamarianalm)
+* Tech lead: [@gmoura](https://github.com/gmoura)
+* Devs: [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
 
 #### [Admin](https://github.com/Laboratoria/admin)
 
 Laboratoria Admin CLI
 
-* Tech lead: @lupomontero
+* Tech lead: [@lupomontero](https://github.com/lupomontero)
 
 #### [Developers](https://github.com/Laboratoria/developers)
 
 DevsChapter website
 
-* Tech lead: @lupomontero
+* Tech lead: [@lupomontero](https://github.com/lupomontero)
+* Devs: [@gmoura](https://github.com/gmoura), [@memecast](https://github.com/memecast)
 
 ## Stack
+
+`tl;dr`: Full Stack JavaScript, and we favor the [functional paradigm](https://medium.com/laboratoria-developers/tagged/functional-programming),
+TDD, and if it can be a _pure function_, it must be one.
 
 ## Core
 
@@ -125,13 +130,15 @@ All text formats should follow the guidelines provided in our [etiquette](https:
 [markdown](https://github.com/Laboratoria/etiquette#markdown).
 
 * [Javascript](https://github.com/airbnb/javascript)
+* [React/JSX](https://github.com/airbnb/javascript/tree/master/react)
 * [CSS](https://github.com/airbnb/css)
 * HTML
 * Shell/Bash
 
 ## Contributing
 
-[ wip ]
+Each repository should have a `CONTRIBUTING.md` file with a contributing guide
+for potential contributors.
 
 ## Team
 
