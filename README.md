@@ -30,13 +30,13 @@ Alternate between Wednesdays 1pm and Fridays 9am (Lima time).
 
 ### Office hours
 
-Monday and thursday 4-6pm (Lima time).
+* @lupomontero: Monday and thursday 4-6pm (Lima time).
+* @ivandevp: ?
+* @FabianBravoA: ?
 
 ### Contributing
 
-Issues tagged `help-wanted`
-
-
+We tag issues as `help-wanted` :wink:
 
 ## Products
 
@@ -44,54 +44,89 @@ Issues tagged `help-wanted`
 
 | Product |  Manager  | Description |
 |----------|-----------|-------------|
-| [curricula-js](https://github.com/Laboratoria/curricula-js) | Lupo Montero, Iván Medina | Bootcamp Curriculum (JavaScript)
-| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | Lalo González | Bootcamp Curriculum (UX)
-| [course-parser](https://github.com/Laboratoria/course-parser) | Lupo Montero | CLi used to process curriculum topics in Markdown format
-| [firemin](firemin) | Lupo Montero | Firebase/Firestore extra CLI features
-| [mdlint](mdlint) | Lupo Montero | Markdown linter (CLI)
+| [curricula-js](https://github.com/Laboratoria/curricula-js) | @lupomontero @ivandevp | Bootcamp Curriculum (JavaScript)
+| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | @lalogf | Bootcamp Curriculum (UX)
+| [course-parser](https://github.com/Laboratoria/course-parser) | @lupomontero | CLi used to process curriculum topics in Markdown format
+| [firemin](firemin) | @lupomontero | Firebase/Firestore extra CLI features
+| [mdlint](mdlint) | @lupomontero | Markdown linter (CLI)
 
 ### Private repos
 
-| Product |  Manager  | Description |
-|----------|-----------|-------------|
-| [api.laboratoria.la](https://github.com/Laboratoria/api.laboratoria.la) | Diego Velez, Lupo Montero | HTTP JSON API
-| [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la) | Diego Velez, Lupo Montero | Learning Management System (LMS)
-| [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la) | Andrea Lamas | Job Placemente App
-| [Admin](https://github.com/Laboratoria/admin) | Lupo Montero | Laboratoria Admin CLI
-| [Developers](https://github.com/Laboratoria/developers) | Lupo Montero | DevsChapter website
+#### [api.laboratoria.la](https://github.com/Laboratoria/api.laboratoria.la)
+
+HTTP JSON API
+
+* PM: @diegovelezg, @lupomontero
+* Tech lead: @lupomontero
+
+#### [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
+
+Learning Management System (LMS)
+
+* PM: @chamodev
+* Tech lead: @ivandevp
+* Devs: @MaiaRojas, @arun1595
+
+#### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
+
+Job Placemente App
+
+* PM: @andreamarianalm
+* Tech lead: @gmoura
+* Devs: @RuthMeryCardenas
+
+#### [Admin](https://github.com/Laboratoria/admin)
+
+Laboratoria Admin CLI
+
+* Tech lead: @lupomontero
+
+#### [Developers](https://github.com/Laboratoria/developers)
+
+DevsChapter website
+
+* Tech lead: @lupomontero
 
 ## Stack
 
 ## Core
 
 * JavaScript (E6, ES7, ES8)
-* Node / NPM / Yarn
+* Node / NPM / [Yarn](https://yarnpkg.com/en/)
 * Git + GitHub
 
 ## Backend
 
-* Firebase (Firestore)
+* [Firebase](https://firebase.google.com/) (hosting)
+* [Firestore](https://firebase.google.com/docs/firestore/) (database)
 
 ## Frontend
 
-* Redux
-* React
-* Material UI
+In [this blog post](https://medium.com/laboratoria-developers/arquitectura-de-interfaces-web-parte-1-a41053c2a1f2)
+you can find a description of the basic **JavaScript stack** we use in the
+front-end (article is in spanish).
+
+* [Babel](https://babeljs.io/)
+* [Webpack](https://webpack.js.org/)
+* [Redux](https://redux.js.org/)
+* [React](https://reactjs.org/)
+* [Material UI](https://material-ui.com/)
 
 ## Testing and CI
 
-* ESLint
-* jest / mocha / chai
-* Travis CI
+* [ESLint](https://eslint.org/)
+* [Jest](https://jestjs.io/)
+* [Travis CI](https://travis-ci.org/)
 
 ## Coding standards
 
-[ wip ]
+All text formats should follow the guidelines provided in our [etiquette](https://github.com/Laboratoria/etiquette#writing), including
+[plain text](https://github.com/Laboratoria/etiquette#plain-text) and
+[markdown](https://github.com/Laboratoria/etiquette#markdown).
 
-* JavaScript
+* [Javascript](https://github.com/airbnb/javascript)
+* [CSS](https://github.com/airbnb/css)
 * HTML
-* CSS
-* Markdown
 * Shell/Bash
 
 ## Contributing
@@ -103,3 +138,5 @@ Issues tagged `help-wanted`
 [Developers Team on GitHub](https://github.com/orgs/Laboratoria/teams/developers/members)
 
 ## Code of conduct
+
+See [#20](https://github.com/Laboratoria/developers.laboratoria.la/pull/20)
