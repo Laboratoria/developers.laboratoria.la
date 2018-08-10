@@ -1,17 +1,17 @@
 [
-    {
-       "name":"BrazilJS",
-       "url":"https://braziljs.org/conf/",
-       "desc":"Brazilian Javascript conference | August, 2018"
-    },
-    {
-        "name": "CSSConf Argentina",
-        "url": "http://cssconfar.com/",
-        "desc": "Argentina CSS conference| August, 2018"
-    },
-    {
-        "name": "Vue.js Submit",
-        "url": "https://vuejssummit.com/",
-        "desc": "Brazilian Vue.js conference| August, 2018"
-    }
+  {
+    "name":"BrazilJS",
+    "url":"https://braziljs.org/conf/",
+    "desc":"Brazilian Javascript conference | August, 2018"
+  },
+  {
+    "name": "CSSConf Argentina",
+    "url": "http://cssconfar.com/",
+    "desc": "Argentina CSS conference| August, 2018"
+  },
+  {
+    "name": "Vue.js Submit",
+    "url": "https://vuejssummit.com/",
+    "desc": "Brazilian Vue.js conference| August, 2018"
+  }
 ]
