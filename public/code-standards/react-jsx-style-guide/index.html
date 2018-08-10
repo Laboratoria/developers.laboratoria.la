@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React&#x2F;JSX Style Guide">
+<meta property="og:url" content="https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/index.html">
+<meta property="og:site_name" content="Laboratoria Developer Chapter">
+<meta property="og:description" content="This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png">
+<meta property="og:updated_time" content="2018-08-10T13:36:32.816Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React&#x2F;JSX Style Guide">
+<meta name="twitter:description" content="This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico?v=1">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>React/JSX Style Guide</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/coding/">Code Standards</a></li>
+         
+          <li><a href="https://github.com/orgs/Laboratoria/teams/developers/members">Team</a></li>
+         
+          <li><a href="/etiquette">Etiquette</a></li>
+         
+          <li><a href="http://confcodeofconduct.com/">Conduct</a></li>
+         
+          <li><a href="/contributing/">Contributing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/code-standards/github-workflow/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/code-standards/javascript-style-guide/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&text=React/JSX Style Guide"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&is_video=false&description=React/JSX Style Guide"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React/JSX Style Guide&body=Check out this article: https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&name=React/JSX Style Guide&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Table-of-Contents"><span class="toc-number">1.</span> <span class="toc-text">Table of Contents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Rules"><span class="toc-number">2.</span> <span class="toc-text">Basic Rules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-vs-React-createClass-vs-stateless"><span class="toc-number">3.</span> <span class="toc-text">Class vs React.createClass vs stateless</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mixins"><span class="toc-number">4.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Naming"><span class="toc-number">5.</span> <span class="toc-text">Naming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Declaration"><span class="toc-number">6.</span> <span class="toc-text">Declaration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alignment"><span class="toc-number">7.</span> <span class="toc-text">Alignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quotes"><span class="toc-number">8.</span> <span class="toc-text">Quotes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spacing"><span class="toc-number">9.</span> <span class="toc-text">Spacing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Props"><span class="toc-number">10.</span> <span class="toc-text">Props</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Refs"><span class="toc-number">11.</span> <span class="toc-text">Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Parentheses"><span class="toc-number">12.</span> <span class="toc-text">Parentheses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tags"><span class="toc-number">13.</span> <span class="toc-text">Tags</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-number">14.</span> <span class="toc-text">Methods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ordering"><span class="toc-number">15.</span> <span class="toc-text">Ordering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#isMounted"><span class="toc-number">16.</span> <span class="toc-text">isMounted</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Translation"><span class="toc-number">17.</span> <span class="toc-text">Translation</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        React/JSX Style Guide
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Laboratoria Developer Chapter</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-07-15T20:18:08.000Z" itemprop="datePublished">2018-07-15</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on a case-by-case basis. Currently, anything prior to stage 3 is not included nor recommended in this guide.</p>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ol>
+<li><a href="#basic-rules">Basic Rules</a></li>
+<li><a href="#class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</a></li>
+<li><a href="#mixins">Mixins</a></li>
+<li><a href="#naming">Naming</a></li>
+<li><a href="#declaration">Declaration</a></li>
+<li><a href="#alignment">Alignment</a></li>
+<li><a href="#quotes">Quotes</a></li>
+<li><a href="#spacing">Spacing</a></li>
+<li><a href="#props">Props</a></li>
+<li><a href="#refs">Refs</a></li>
+<li><a href="#parentheses">Parentheses</a></li>
+<li><a href="#tags">Tags</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#ordering">Ordering</a></li>
+<li><a href="#ismounted"><code>isMounted</code></a></li>
+</ol>
+<h2 id="Basic-Rules"><a href="#Basic-Rules" class="headerlink" title="Basic Rules"></a>Basic Rules</h2><ul>
+<li>Only include one React component per file.<ul>
+<li>However, multiple <a href="https://facebook.github.io/react/docs/reusable-components.html#stateless-functions" target="_blank" rel="noopener">Stateless, or Pure, Components</a> are allowed per file. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless" target="_blank" rel="noopener"><code>react/no-multi-comp</code></a>.</li>
+</ul>
+</li>
+<li>Always use JSX syntax.</li>
+<li>Do not use <code>React.createElement</code> unless you’re initializing the app from a file that is not JSX.</li>
+</ul>
+<h2 id="Class-vs-React-createClass-vs-stateless"><a href="#Class-vs-React-createClass-vs-stateless" class="headerlink" title="Class vs React.createClass vs stateless"></a>Class vs <code>React.createClass</code> vs stateless</h2><ul>
+<li><p>If you have internal state and/or refs, prefer <code>class extends React.Component</code> over <code>React.createClass</code>. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md" target="_blank" rel="noopener"><code>react/prefer-es6-class</code></a> <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md" target="_blank" rel="noopener"><code>react/prefer-stateless-function</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">const</span> Listing = React.createClass(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;this.state.hello&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Listing</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;this.state.hello&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And if you don’t have state or refs, prefer normal functions (not arrow functions) over classes:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Listing</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;this.props.hello&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad (relying on function name inference is discouraged)</span></span><br><span class="line"><span class="keyword">const</span> Listing = <span class="function">(<span class="params">&#123; hello &#125;</span>) =&gt;</span> (</span><br><span class="line">  &lt;div&gt;&#123;hello&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ good</span></span><br><span class="line"><span class="regexp">function Listing(&#123; hello &#125;) &#123;</span></span><br><span class="line"><span class="regexp">  return &lt;div&gt;&#123;hello&#125;&lt;/</span>div&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Mixins"><a href="#Mixins" class="headerlink" title="Mixins"></a>Mixins</h2><ul>
+<li><p><a href="https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html" target="_blank" rel="noopener">Do not use mixins</a>.</p>
+<blockquote>
+<p>Why? Mixins introduce implicit dependencies, cause name clashes, and cause snowballing complexity. Most use cases for mixins can be accomplished in better ways via components, higher-order components, or utility modules.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><ul>
+<li><strong>Extensions</strong>: Use <code>.jsx</code> extension for React components.</li>
+<li><strong>Filename</strong>: Use PascalCase for filenames. E.g., <code>ReservationCard.jsx</code>.</li>
+<li><p><strong>Reference Naming</strong>: Use PascalCase for React components and camelCase for their instances. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md" target="_blank" rel="noopener"><code>react/jsx-pascal-case</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">import</span> reservationCard <span class="keyword">from</span> <span class="string">'./ReservationCard'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">import</span> ReservationCard <span class="keyword">from</span> <span class="string">'./ReservationCard'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">const</span> ReservationItem = <span class="xml"><span class="tag">&lt;<span class="name">ReservationCard</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">// good</span></span><br><span class="line"><span class="xml">const reservationItem = <span class="tag">&lt;<span class="name">ReservationCard</span> /&gt;</span>;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Component Naming</strong>: Use the filename as the component name. For example, <code>ReservationCard.jsx</code> should have a reference name of <code>ReservationCard</code>. However, for root components of a directory, use <code>index.jsx</code> as the filename and use the directory name as the component name:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">import</span> Footer <span class="keyword">from</span> <span class="string">'./Footer/Footer'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">import</span> Footer <span class="keyword">from</span> <span class="string">'./Footer/index'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">import</span> Footer <span class="keyword">from</span> <span class="string">'./Footer'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Higher-order Component Naming</strong>: Use a composite of the higher-order component’s name and the passed-in component’s name as the <code>displayName</code> on the generated component. For example, the higher-order component <code>withFoo()</code>, when passed a component <code>Bar</code> should produce a component with a <code>displayName</code> of <code>withFoo(Bar)</code>.</p>
+<blockquote>
+<p>Why? A component’s <code>displayName</code> may be used by developer tools or in error messages, and having a value that clearly expresses this relationship helps people understand what is happening.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">withFoo</span>(<span class="params">WrappedComponent</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">WithFoo</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">WrappedComponent</span> &#123;<span class="attr">...props</span>&#125; <span class="attr">foo</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">// good</span></span><br><span class="line"><span class="xml">export default function withFoo(WrappedComponent) &#123;</span></span><br><span class="line"><span class="xml">  function WithFoo(props) &#123;</span></span><br><span class="line">    return &lt;WrappedComponent &#123;...props&#125; foo /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  const wrappedComponentName = WrappedComponent.displayName</span><br><span class="line">    || WrappedComponent.name</span><br><span class="line">    || 'Component';</span><br><span class="line"></span><br><span class="line">  WithFoo.displayName = `withFoo($&#123;wrappedComponentName&#125;)`;</span><br><span class="line">  return WithFoo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Props Naming</strong>: Avoid using DOM component prop names for different purposes.</p>
+<blockquote>
+<p>Why? People expect props like <code>style</code> and <code>className</code> to mean one specific thing. Varying this API for a subset of your app makes the code less readable and less maintainable, and may cause bugs.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;MyComponent style=<span class="string">"fancy"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;MyComponent className=<span class="string">"fancy"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;MyComponent variant=<span class="string">"fancy"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Declaration"><a href="#Declaration" class="headerlink" title="Declaration"></a>Declaration</h2><ul>
+<li><p>Do not use <code>displayName</code> for naming components. Instead, name the component by reference.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> React.createClass(&#123;</span><br><span class="line">  displayName: <span class="string">'ReservationCard'</span>,</span><br><span class="line">  <span class="comment">// stuff goes here</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">ReservationCard</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h2><ul>
+<li><p>Follow these alignment styles for JSX syntax. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md" target="_blank" rel="noopener"><code>react/jsx-closing-bracket-location</code></a> <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md" target="_blank" rel="noopener"><code>react/jsx-closing-tag-location</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo superLongParam=<span class="string">"bar"</span></span><br><span class="line">     anotherSuperLongParam=<span class="string">"baz"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  superLongParam=<span class="string">"bar"</span></span><br><span class="line">  anotherSuperLongParam=<span class="string">"baz"</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// if props fit in one line then keep it on the same line</span></span><br><span class="line">&lt;Foo bar=<span class="string">"bar"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// children get indented normally</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  superLongParam=<span class="string">"bar"</span></span><br><span class="line">  anotherSuperLongParam=<span class="string">"baz"</span></span><br><span class="line">&gt;</span><br><span class="line">  &lt;Quux /&gt;</span><br><span class="line">&lt;<span class="regexp">/Foo&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ bad</span></span><br><span class="line"><span class="regexp">&#123;showButton &amp;&amp;</span></span><br><span class="line"><span class="regexp">  &lt;Button /</span>&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">&#123;</span><br><span class="line">  showButton &amp;&amp;</span><br><span class="line">    &lt;Button /&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&#123;showButton &amp;&amp; (</span><br><span class="line">  &lt;Button /&gt;</span><br><span class="line">)&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&#123;showButton &amp;&amp; <span class="xml"><span class="tag">&lt;<span class="name">Button</span> /&gt;</span>&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Quotes"><a href="#Quotes" class="headerlink" title="Quotes"></a>Quotes</h2><ul>
+<li><p>Always use double quotes (<code>&quot;</code>) for JSX attributes, but single quotes (<code>&#39;</code>) for all other JS. eslint: <a href="https://eslint.org/docs/rules/jsx-quotes" target="_blank" rel="noopener"><code>jsx-quotes</code></a></p>
+<blockquote>
+<p>Why? Regular HTML attributes also typically use double quotes instead of single, so JSX attributes mirror this convention.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo bar=<span class="string">'bar'</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo bar=<span class="string">"bar"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo style=&#123;&#123; <span class="attr">left</span>: <span class="string">"20px"</span> &#125;&#125; /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo style=&#123;&#123; <span class="attr">left</span>: <span class="string">'20px'</span> &#125;&#125; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Spacing"><a href="#Spacing" class="headerlink" title="Spacing"></a>Spacing</h2><ul>
+<li><p>Always include a single space in your self-closing tag. eslint: <a href="https://eslint.org/docs/rules/no-multi-spaces" target="_blank" rel="noopener"><code>no-multi-spaces</code></a>, <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md" target="_blank" rel="noopener"><code>react/jsx-tag-spacing</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// very bad</span></span><br><span class="line">&lt;Foo                 /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo</span><br><span class="line"> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Do not pad JSX curly braces with spaces. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md" target="_blank" rel="noopener"><code>react/jsx-curly-spacing</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo bar=&#123; baz &#125; /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo bar=&#123;baz&#125; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h2><ul>
+<li><p>Always use camelCase for prop names.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  UserName=<span class="string">"hello"</span></span><br><span class="line">  phone_number=&#123;<span class="number">12345678</span>&#125;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  userName=<span class="string">"hello"</span></span><br><span class="line">  phoneNumber=&#123;<span class="number">12345678</span>&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Omit the value of the prop when it is explicitly <code>true</code>. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md" target="_blank" rel="noopener"><code>react/jsx-boolean-value</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  hidden=&#123;<span class="literal">true</span>&#125;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  hidden</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo hidden /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Always include an <code>alt</code> prop on <code>&lt;img&gt;</code> tags. If the image is presentational, <code>alt</code> can be an empty string or the <code>&lt;img&gt;</code> must have <code>role=&quot;presentation&quot;</code>. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md" target="_blank" rel="noopener"><code>jsx-a11y/alt-text</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;img src=<span class="string">"hello.jpg"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;img src=<span class="string">"hello.jpg"</span> alt=<span class="string">"Me waving hello"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;img src=<span class="string">"hello.jpg"</span> alt=<span class="string">""</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;img src=<span class="string">"hello.jpg"</span> role=<span class="string">"presentation"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Do not use words like “image”, “photo”, or “picture” in <code>&lt;img&gt;</code> <code>alt</code> props. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md" target="_blank" rel="noopener"><code>jsx-a11y/img-redundant-alt</code></a></p>
+<blockquote>
+<p>Why? Screenreaders already announce <code>img</code> elements as images, so there is no need to include this information in the alt text.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;img src=<span class="string">"hello.jpg"</span> alt=<span class="string">"Picture of me waving hello"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;img src=<span class="string">"hello.jpg"</span> alt=<span class="string">"Me waving hello"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use only valid, non-abstract <a href="https://www.w3.org/TR/wai-aria/#usage_intro" target="_blank" rel="noopener">ARIA roles</a>. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md" target="_blank" rel="noopener"><code>jsx-a11y/aria-role</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad - not an ARIA role</span></span><br><span class="line">&lt;div role=<span class="string">"datepicker"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad - abstract ARIA role</span></span><br><span class="line">&lt;div role=<span class="string">"range"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;div role=<span class="string">"button"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Do not use <code>accessKey</code> on elements. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md" target="_blank" rel="noopener"><code>jsx-a11y/no-access-key</code></a></p>
+<blockquote>
+<p>Why? Inconsistencies between keyboard shortcuts and keyboard commands used by people using screenreaders and keyboards complicate accessibility.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;div accessKey=<span class="string">"h"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;div /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Avoid using an array index as <code>key</code> prop, prefer a unique ID. (<a href="https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318" target="_blank" rel="noopener">why?</a>)</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&#123;todos.map(<span class="function">(<span class="params">todo, index</span>) =&gt;</span></span><br><span class="line">  &lt;Todo</span><br><span class="line">    &#123;...todo&#125;</span><br><span class="line">    key=&#123;index&#125;</span><br><span class="line">  /&gt;</span><br><span class="line">)&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&#123;todos.map(<span class="function"><span class="params">todo</span> =&gt;</span> (</span><br><span class="line">  &lt;Todo</span><br><span class="line">    &#123;...todo&#125;</span><br><span class="line">    key=&#123;todo.id&#125;</span><br><span class="line">  /&gt;</span><br><span class="line">))&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Always define explicit defaultProps for all non-required props.</p>
+<blockquote>
+<p>Why? propTypes are a form of documentation, and providing defaultProps means the reader of your code doesn’t have to assume as much. In addition, it can mean that your code can omit certain type checks.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SFC</span>(<span class="params">&#123; foo, bar, children &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;foo&#125;&#123;bar&#125;&#123;children&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">SFC.propTypes = &#123;</span><br><span class="line">  foo: PropTypes.number.isRequired,</span><br><span class="line">  bar: PropTypes.string,</span><br><span class="line">  children: PropTypes.node,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SFC</span>(<span class="params">&#123; foo, bar, children &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;foo&#125;&#123;bar&#125;&#123;children&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">SFC.propTypes = &#123;</span><br><span class="line">  foo: PropTypes.number.isRequired,</span><br><span class="line">  bar: PropTypes.string,</span><br><span class="line">  children: PropTypes.node,</span><br><span class="line">&#125;;</span><br><span class="line">SFC.defaultProps = &#123;</span><br><span class="line">  bar: <span class="string">''</span>,</span><br><span class="line">  children: <span class="literal">null</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use spread props sparingly.</p>
+<blockquote>
+<p>Why? Otherwise you’re more likely to pass unnecessary props down to components. And for React v15.6.1 and older, you could <a href="https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html" target="_blank" rel="noopener">pass invalid HTML attributes to the DOM</a>.</p>
+</blockquote>
+<p>Exceptions:</p>
+</li>
+<li><p>HOCs that proxy down props and hoist propTypes</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">HOC</span>(<span class="params">WrappedComponent</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="class"><span class="keyword">class</span> <span class="title">Proxy</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="built_in">Proxy</span>.propTypes = &#123;</span><br><span class="line">      text: PropTypes.string,</span><br><span class="line">      isLoading: PropTypes.bool</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">WrappedComponent</span> &#123;<span class="attr">...this.props</span>&#125; /&gt;</span></span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Spreading objects with known, explicit props. This can be particularly useful when testing React components with Mocha’s beforeEach construct.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> props = &#123;</span><br><span class="line">    text: <span class="string">''</span>,</span><br><span class="line">    isPublished: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">div</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span>);</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>Notes for use:<br>Filter out unnecessary props when possible. Also, use <a href="https://www.npmjs.com/package/prop-types-exact" target="_blank" rel="noopener">prop-types-exact</a> to help prevent bugs.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; irrelevantProp, ...relevantProps  &#125; = <span class="keyword">this</span>.props;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">WrappedComponent</span> &#123;<span class="attr">...relevantProps</span>&#125; /&gt;</span></span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">// bad</span></span><br><span class="line"><span class="xml">render() &#123;</span></span><br><span class="line"><span class="xml">  const &#123; irrelevantProp, ...relevantProps  &#125; = this.props;</span></span><br><span class="line">  return &lt;WrappedComponent &#123;...this.props&#125; /&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h2><ul>
+<li><p>Always use ref callbacks. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md" target="_blank" rel="noopener"><code>react/no-string-refs</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  ref=<span class="string">"myRef"</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  ref=&#123;(ref) =&gt; &#123; <span class="keyword">this</span>.myRef = ref; &#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Parentheses"><a href="#Parentheses" class="headerlink" title="Parentheses"></a>Parentheses</h2><ul>
+<li><p>Wrap JSX tags in parentheses when they span more than one line. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md" target="_blank" rel="noopener"><code>react/jsx-wrap-multilines</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span> <span class="attr">variant</span>=<span class="string">"long body"</span> <span class="attr">foo</span>=<span class="string">"bar"</span>&gt;</span></span></span><br><span class="line"><span class="xml">           <span class="tag">&lt;<span class="name">MyChild</span> /&gt;</span></span></span><br><span class="line"><span class="xml">         <span class="tag">&lt;/<span class="name">MyComponent</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;MyComponent variant=<span class="string">"long body"</span> foo=<span class="string">"bar"</span>&gt;</span><br><span class="line">      &lt;MyChild /&gt;</span><br><span class="line">    &lt;<span class="regexp">/MyComponent&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ good, when single line</span></span><br><span class="line"><span class="regexp">render() &#123;</span></span><br><span class="line"><span class="regexp">  const body = &lt;div&gt;hello&lt;/</span>div&gt;;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">MyComponent</span>&gt;</span>&#123;body&#125;<span class="tag">&lt;/<span class="name">MyComponent</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><ul>
+<li><p>Always self-close tags that have no children. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md" target="_blank" rel="noopener"><code>react/self-closing-comp</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo variant=<span class="string">"stuff"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">Foo</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo variant=<span class="string">"stuff"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>If your component has multi-line properties, close its tag on a new line. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md" target="_blank" rel="noopener"><code>react/jsx-closing-bracket-location</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  bar=<span class="string">"bar"</span></span><br><span class="line">  baz=<span class="string">"baz"</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line">&lt;Foo</span><br><span class="line">  bar=<span class="string">"bar"</span></span><br><span class="line">  baz=<span class="string">"baz"</span></span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ul>
+<li><p>Use arrow functions to close over local variables.</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ItemList</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &#123;props.items.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> (</span><br><span class="line">        &lt;Item</span><br><span class="line">          key=&#123;item.key&#125;</span><br><span class="line">          onClick=&#123;() =&gt; doSomethingWith(item.name, index)&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">    &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Bind event handlers for the render method in the constructor. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md" target="_blank" rel="noopener"><code>react/jsx-no-bind</code></a></p>
+<blockquote>
+<p>Why? A bind call in the render path creates a brand new function on every single render.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  onClickDiv() &#123;</span><br><span class="line">    <span class="comment">// do stuff</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">onClick</span>=<span class="string">&#123;this.onClickDiv.bind(this)&#125;</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">// good</span></span><br><span class="line"><span class="xml">class extends React.Component &#123;</span></span><br><span class="line"><span class="xml">  constructor(props) &#123;</span></span><br><span class="line"><span class="xml">    super(props);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    this.onClickDiv = this.onClickDiv.bind(this);</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  onClickDiv() &#123;</span></span><br><span class="line"><span class="xml">    // do stuff</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  render() &#123;</span></span><br><span class="line">    return &lt;div onClick=&#123;this.onClickDiv&#125; /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Do not use underscore prefix for internal methods of a React component.</p>
+<blockquote>
+<p>Why? Underscore prefixes are sometimes used as a convention in other languages to denote privacy. But, unlike those languages, there is no native support for privacy in JavaScript, everything is public. Regardless of your intentions, adding underscore prefixes to your properties does not actually make them private, and any property (underscore-prefixed or not) should be treated as being public. See issues <a href="https://github.com/airbnb/javascript/issues/1024" target="_blank" rel="noopener">#1024</a>, and <a href="https://github.com/airbnb/javascript/issues/490" target="_blank" rel="noopener">#490</a> for a more in-depth discussion.</p>
+</blockquote>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">React.createClass(&#123;</span><br><span class="line">  _onClickSubmit() &#123;</span><br><span class="line">    <span class="comment">// do stuff</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// other stuff</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  onClickSubmit() &#123;</span><br><span class="line">    <span class="comment">// do stuff</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// other stuff</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Be sure to return a value in your <code>render</code> methods. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md" target="_blank" rel="noopener"><code>react/require-render-return</code></a></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line">render() &#123;</span><br><span class="line">  (<span class="xml"><span class="tag">&lt;<span class="name">div</span> /&gt;</span>);</span></span><br><span class="line"><span class="xml">&#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">// good</span></span><br><span class="line"><span class="xml">render() &#123;</span></span><br><span class="line"><span class="xml">  return (<span class="tag">&lt;<span class="name">div</span> /&gt;</span>);</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Ordering"><a href="#Ordering" class="headerlink" title="Ordering"></a>Ordering</h2><ul>
+<li>Ordering for <code>class extends React.Component</code>:</li>
+</ul>
+<ol>
+<li>optional <code>static</code> methods</li>
+<li><code>constructor</code></li>
+<li><code>getChildContext</code></li>
+<li><code>componentWillMount</code></li>
+<li><code>componentDidMount</code></li>
+<li><code>componentWillReceiveProps</code></li>
+<li><code>shouldComponentUpdate</code></li>
+<li><code>componentWillUpdate</code></li>
+<li><code>componentDidUpdate</code></li>
+<li><code>componentWillUnmount</code></li>
+<li><em>clickHandlers or eventHandlers</em> like <code>onClickSubmit()</code> or <code>onChangeDescription()</code></li>
+<li><em>getter methods for <code>render</code></em> like <code>getSelectReason()</code> or <code>getFooterContent()</code></li>
+<li><em>optional render methods</em> like <code>renderNavigation()</code> or <code>renderProfilePicture()</code></li>
+<li><code>render</code></li>
+</ol>
+<ul>
+<li><p>How to define <code>propTypes</code>, <code>defaultProps</code>, <code>contextTypes</code>, etc…</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> propTypes = &#123;</span><br><span class="line">  id: PropTypes.number.isRequired,</span><br><span class="line">  url: PropTypes.string.isRequired,</span><br><span class="line">  text: PropTypes.string,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> defaultProps = &#123;</span><br><span class="line">  text: <span class="string">'Hello World'</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Link</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> methodsAreOk() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&#123;this.props.url&#125;</span> <span class="attr">data-id</span>=<span class="string">&#123;this.props.id&#125;</span>&gt;</span>&#123;this.props.text&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Link.propTypes = propTypes;</span><br><span class="line">Link.defaultProps = defaultProps;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Link;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ordering for <code>React.createClass</code>: eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md" target="_blank" rel="noopener"><code>react/sort-comp</code></a></p>
+</li>
+</ul>
+<ol>
+<li><code>displayName</code></li>
+<li><code>propTypes</code></li>
+<li><code>contextTypes</code></li>
+<li><code>childContextTypes</code></li>
+<li><code>mixins</code></li>
+<li><code>statics</code></li>
+<li><code>defaultProps</code></li>
+<li><code>getDefaultProps</code></li>
+<li><code>getInitialState</code></li>
+<li><code>getChildContext</code></li>
+<li><code>componentWillMount</code></li>
+<li><code>componentDidMount</code></li>
+<li><code>componentWillReceiveProps</code></li>
+<li><code>shouldComponentUpdate</code></li>
+<li><code>componentWillUpdate</code></li>
+<li><code>componentDidUpdate</code></li>
+<li><code>componentWillUnmount</code></li>
+<li><em>clickHandlers or eventHandlers</em> like <code>onClickSubmit()</code> or <code>onChangeDescription()</code></li>
+<li><em>getter methods for <code>render</code></em> like <code>getSelectReason()</code> or <code>getFooterContent()</code></li>
+<li><em>optional render methods</em> like <code>renderNavigation()</code> or <code>renderProfilePicture()</code></li>
+<li><code>render</code></li>
+</ol>
+<h2 id="isMounted"><a href="#isMounted" class="headerlink" title="isMounted"></a><code>isMounted</code></h2><ul>
+<li><p>Do not use <code>isMounted</code>. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md" target="_blank" rel="noopener"><code>react/no-is-mounted</code></a></p>
+<blockquote>
+<p>Why? <a href="https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html" target="_blank" rel="noopener"><code>isMounted</code> is an anti-pattern</a>, is not available when using ES6 classes, and is on its way to being officially deprecated.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h2><p>  This JSX/React style guide is also available in other languages:</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png" alt="cn"> <strong>Chinese (Simplified)</strong>: <a href="https://github.com/JasonBoy/javascript/tree/master/react" target="_blank" rel="noopener">JasonBoy/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png" alt="tw"> <strong>Chinese (Traditional)</strong>: <a href="https://github.com/jigsawye/javascript/tree/master/react" target="_blank" rel="noopener">jigsawye/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png" alt="es"> <strong>Español</strong>: <a href="https://github.com/agrcrobles/javascript/tree/master/react" target="_blank" rel="noopener">agrcrobles/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png" alt="jp"> <strong>Japanese</strong>: <a href="https://github.com/mitsuruog/javascript-style-guide/tree/master/react" target="_blank" rel="noopener">mitsuruog/javascript-style-guide</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png" alt="kr"> <strong>Korean</strong>: <a href="https://github.com/apple77y/javascript/tree/master/react" target="_blank" rel="noopener">apple77y/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png" alt="pl"> <strong>Polish</strong>: <a href="https://github.com/pietraszekl/javascript/tree/master/react" target="_blank" rel="noopener">pietraszekl/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png" alt="Br"> <strong>Portuguese</strong>: <a href="https://github.com/ronal2do/airbnb-react-styleguide" target="_blank" rel="noopener">ronal2do/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png" alt="ru"> <strong>Russian</strong>: <a href="https://github.com/leonidlebedev/javascript-airbnb/tree/master/react" target="_blank" rel="noopener">leonidlebedev/javascript-airbnb</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png" alt="th"> <strong>Thai</strong>: <a href="https://github.com/lvarayut/javascript-style-guide/tree/master/react" target="_blank" rel="noopener">lvarayut/javascript-style-guide</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png" alt="tr"> <strong>Turkish</strong>: <a href="https://github.com/alioguzhan/react-style-guide" target="_blank" rel="noopener">alioguzhan/react-style-guide</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png" alt="ua"> <strong>Ukrainian</strong>: <a href="https://github.com/ivanzusko/javascript/tree/master/react" target="_blank" rel="noopener">ivanzusko/javascript</a></li>
+<li><img src="https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png" alt="vn"> <strong>Vietnam</strong>: <a href="https://github.com/UETCodeCamp/jsx-style-guide" target="_blank" rel="noopener">uetcodecamp/jsx-style-guide</a></li>
+</ul>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/coding/">Code Standards</a></li>
+         
+          <li><a href="https://github.com/orgs/Laboratoria/teams/developers/members">Team</a></li>
+         
+          <li><a href="/etiquette">Etiquette</a></li>
+         
+          <li><a href="http://confcodeofconduct.com/">Conduct</a></li>
+         
+          <li><a href="/contributing/">Contributing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Table-of-Contents"><span class="toc-number">1.</span> <span class="toc-text">Table of Contents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Rules"><span class="toc-number">2.</span> <span class="toc-text">Basic Rules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-vs-React-createClass-vs-stateless"><span class="toc-number">3.</span> <span class="toc-text">Class vs React.createClass vs stateless</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mixins"><span class="toc-number">4.</span> <span class="toc-text">Mixins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Naming"><span class="toc-number">5.</span> <span class="toc-text">Naming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Declaration"><span class="toc-number">6.</span> <span class="toc-text">Declaration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alignment"><span class="toc-number">7.</span> <span class="toc-text">Alignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quotes"><span class="toc-number">8.</span> <span class="toc-text">Quotes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spacing"><span class="toc-number">9.</span> <span class="toc-text">Spacing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Props"><span class="toc-number">10.</span> <span class="toc-text">Props</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Refs"><span class="toc-number">11.</span> <span class="toc-text">Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Parentheses"><span class="toc-number">12.</span> <span class="toc-text">Parentheses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tags"><span class="toc-number">13.</span> <span class="toc-text">Tags</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-number">14.</span> <span class="toc-text">Methods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ordering"><span class="toc-number">15.</span> <span class="toc-text">Ordering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#isMounted"><span class="toc-number">16.</span> <span class="toc-text">isMounted</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Translation"><span class="toc-number">17.</span> <span class="toc-text">Translation</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&text=React/JSX Style Guide"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&is_video=false&description=React/JSX Style Guide"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React/JSX Style Guide&body=Check out this article: https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&title=React/JSX Style Guide"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://hungry-borg-b29086.netlify.com/code-standards/react-jsx-style-guide/&name=React/JSX Style Guide&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Laboratoria Developer Chapter
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/coding/">Code Standards</a></li>
+         
+          <li><a href="https://github.com/orgs/Laboratoria/teams/developers/members">Team</a></li>
+         
+          <li><a href="/etiquette">Etiquette</a></li>
+         
+          <li><a href="http://confcodeofconduct.com/">Conduct</a></li>
+         
+          <li><a href="/contributing/">Contributing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

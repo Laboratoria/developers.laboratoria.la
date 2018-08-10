@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="WorkflowCurrently, there are two type of projects, some are in production stage and other in the early stage. Projects in ProductionFor projects that are in production, that means projects that have a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Workflow">
+<meta property="og:url" content="https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/index.html">
+<meta property="og:site_name" content="Laboratoria Developer Chapter">
+<meta property="og:description" content="WorkflowCurrently, there are two type of projects, some are in production stage and other in the early stage. Projects in ProductionFor projects that are in production, that means projects that have a">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-10T13:36:32.815Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Github Workflow">
+<meta name="twitter:description" content="WorkflowCurrently, there are two type of projects, some are in production stage and other in the early stage. Projects in ProductionFor projects that are in production, that means projects that have a">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico?v=1">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Github Workflow</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/coding/">Code Standards</a></li>
+         
+          <li><a href="https://github.com/orgs/Laboratoria/teams/developers/members">Team</a></li>
+         
+          <li><a href="/etiquette">Etiquette</a></li>
+         
+          <li><a href="http://confcodeofconduct.com/">Conduct</a></li>
+         
+          <li><a href="/contributing/">Contributing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/code-standards/react-jsx-style-guide/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&text=Github Workflow"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&is_video=false&description=Github Workflow"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Github Workflow&body=Check out this article: https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&name=Github Workflow&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Workflow"><span class="toc-number">1.</span> <span class="toc-text">Workflow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Projects-in-Production"><span class="toc-number">1.1.</span> <span class="toc-text">Projects in Production</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Projects-in-Early-stage"><span class="toc-number">1.2.</span> <span class="toc-text">Projects in Early stage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Good-commit-messages"><span class="toc-number">2.</span> <span class="toc-text">Good commit messages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Good-to-do"><span class="toc-number">2.1.</span> <span class="toc-text">Good to do</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commit-message-examples"><span class="toc-number">2.2.</span> <span class="toc-text">Commit message examples</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branch-naming-conventions"><span class="toc-number">3.</span> <span class="toc-text">Branch naming conventions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-rules"><span class="toc-number">3.1.</span> <span class="toc-text">Basic rules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Group-tokens"><span class="toc-number">3.2.</span> <span class="toc-text">Group tokens</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Short-well-defined-tokens"><span class="toc-number">3.3.</span> <span class="toc-text">Short well-defined tokens</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Github Workflow
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Laboratoria Developer Chapter</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-07-15T21:14:30.000Z" itemprop="datePublished">2018-07-15</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h2><p>Currently, there are two type of projects, some are in production stage and other in the early stage.</p>
+<h3 id="Projects-in-Production"><a href="#Projects-in-Production" class="headerlink" title="Projects in Production"></a>Projects in Production</h3><p>For projects that are in production, that means projects that have a scheduled release live cycle, we could work with Git Flow:</p>
+<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank" rel="noopener">Learn Git flow</a> <em>by Atlassian</em></p>
+<h3 id="Projects-in-Early-stage"><a href="#Projects-in-Early-stage" class="headerlink" title="Projects in Early stage"></a>Projects in Early stage</h3><p>For projects that is in the early stage, that means not already in production, we could work with Feature Branch Workflow:</p>
+<p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow" target="_blank" rel="noopener">learn Feature Branch Workflow</a> <em>by Atlassian</em></p>
+<h2 id="Good-commit-messages"><a href="#Good-commit-messages" class="headerlink" title="Good commit messages"></a>Good commit messages</h2><p>Good commit messages serve at least three important purposes:</p>
+<ul>
+<li>To speed up the reviewing process.</li>
+<li>To help us write a good release note.</li>
+<li>To help the future maintainers (it could be you!), say five years into the future, to find out why a particular change was made to the code or why a specific feature was added.</li>
+</ul>
+<p>Structure your commit message like this:</p>
+<p>From: <a href="http://git-scm.com/book/ch5-2.html" target="_blank" rel="noopener">http://git-scm.com/book/ch5-2.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Short (50 chars or less) summary of changes</span><br><span class="line"></span><br><span class="line">More detailed explanatory text, if necessary.  Wrap it to about 72</span><br><span class="line">characters or so.  In some contexts, the first line is treated as the</span><br><span class="line">subject of an email and the rest of the text as the body.  The blank</span><br><span class="line">line separating the summary from the body is critical (unless you omit</span><br><span class="line">the body entirely); tools like rebase can get confused if you run the</span><br><span class="line">two together.</span><br><span class="line"></span><br><span class="line">Further paragraphs come after blank lines.</span><br><span class="line"></span><br><span class="line">  - Bullet points are okay, too</span><br><span class="line"></span><br><span class="line">  - Typically a hyphen or asterisk is used for the bullet, preceded by a</span><br><span class="line">    single space, with blank lines in between, but conventions vary here</span><br></pre></td></tr></table></figure>
+<h3 id="Good-to-do"><a href="#Good-to-do" class="headerlink" title="Good to do"></a>Good to do</h3><ul>
+<li>Write the summary line and description of what you have done in the imperative mode, that is as if you were commanding someone. Start the line with “Fix”, “Add”, “Change” instead of “Fixed”, “Added”, “Changed”.</li>
+<li>Always leave the second line blank.</li>
+<li>Line break the commit message (to make the commit message readable without having to scroll horizontally in gitk).</li>
+</ul>
+<h3 id="Commit-message-examples"><a href="#Commit-message-examples" class="headerlink" title="Commit message examples"></a>Commit message examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Start to create a new Filer version</span><br><span class="line"></span><br><span class="line">A new version of the Filter that we are creating with some UI improvements</span><br><span class="line">  - Changed the color</span><br><span class="line">  - Mobile friendly</span><br></pre></td></tr></table></figure>
+<h2 id="Branch-naming-conventions"><a href="#Branch-naming-conventions" class="headerlink" title="Branch naming conventions"></a>Branch naming conventions</h2><h3 id="Basic-rules"><a href="#Basic-rules" class="headerlink" title="Basic rules"></a>Basic rules</h3><ul>
+<li>Use grouping tokens (words) at the beginning of your branch names.</li>
+<li>Define and use short lead tokens to differentiate branches in a way that is meaningful to your workflow.</li>
+<li>Use slashes to separate parts of your branch names.</li>
+<li>Do not use bare numbers as leading parts.</li>
+<li>Avoid long descriptive names for long-lived branches.</li>
+</ul>
+<h3 id="Group-tokens"><a href="#Group-tokens" class="headerlink" title="Group tokens"></a>Group tokens</h3><p>Use “grouping” tokens in front of your branch names.</p>
+<p>Examples:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">group1/foo</span><br><span class="line">group2/foo</span><br><span class="line">group1/bar</span><br><span class="line">group2/bar</span><br><span class="line">group3/bar</span><br><span class="line">group1/baz</span><br></pre></td></tr></table></figure>
+<h3 id="Short-well-defined-tokens"><a href="#Short-well-defined-tokens" class="headerlink" title="Short well-defined tokens"></a>Short well-defined tokens</h3><p>Choose short tokens so they do not add too much noise to every one of your branch names. I use these:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wip       Works in progress; stuff I know won&apos;t be finished soon</span><br><span class="line">feat      Feature I&apos;m adding or expanding</span><br><span class="line">bug       Bug fix or experiment</span><br><span class="line">junk      Throwaway branch created to experiment</span><br></pre></td></tr></table></figure>
+<p><em>Source: <a href="https://stackoverflow.com/questions/273695/git-branch-naming-best-practices/6065944#6065944" target="_blank" rel="noopener">stackoverflow</a></em></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/coding/">Code Standards</a></li>
+         
+          <li><a href="https://github.com/orgs/Laboratoria/teams/developers/members">Team</a></li>
+         
+          <li><a href="/etiquette">Etiquette</a></li>
+         
+          <li><a href="http://confcodeofconduct.com/">Conduct</a></li>
+         
+          <li><a href="/contributing/">Contributing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Workflow"><span class="toc-number">1.</span> <span class="toc-text">Workflow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Projects-in-Production"><span class="toc-number">1.1.</span> <span class="toc-text">Projects in Production</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Projects-in-Early-stage"><span class="toc-number">1.2.</span> <span class="toc-text">Projects in Early stage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Good-commit-messages"><span class="toc-number">2.</span> <span class="toc-text">Good commit messages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Good-to-do"><span class="toc-number">2.1.</span> <span class="toc-text">Good to do</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Commit-message-examples"><span class="toc-number">2.2.</span> <span class="toc-text">Commit message examples</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branch-naming-conventions"><span class="toc-number">3.</span> <span class="toc-text">Branch naming conventions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-rules"><span class="toc-number">3.1.</span> <span class="toc-text">Basic rules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Group-tokens"><span class="toc-number">3.2.</span> <span class="toc-text">Group tokens</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Short-well-defined-tokens"><span class="toc-number">3.3.</span> <span class="toc-text">Short well-defined tokens</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&text=Github Workflow"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&is_video=false&description=Github Workflow"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Github Workflow&body=Check out this article: https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&title=Github Workflow"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://hungry-borg-b29086.netlify.com/code-standards/github-workflow/&name=Github Workflow&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Laboratoria Developer Chapter
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/coding/">Code Standards</a></li>
+         
+          <li><a href="https://github.com/orgs/Laboratoria/teams/developers/members">Team</a></li>
+         
+          <li><a href="/etiquette">Etiquette</a></li>
+         
+          <li><a href="http://confcodeofconduct.com/">Conduct</a></li>
+         
+          <li><a href="/contributing/">Contributing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
