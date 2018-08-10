@@ -18,11 +18,10 @@ nav:
   coding: /coding/
   team: https://github.com/orgs/Laboratoria/teams/developers/members
   etiquette: /etiquette
-  conduct: http://confcodeofconduct.com/  
-  contributing: /contributing/
+  conduct: http://confcodeofconduct.com/
 
 # Links to your social media accounts.
-# The keys should correspond to Fontawesome icon names 
+# The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
@@ -70,7 +69,7 @@ logo:
 # Options:
 #   - url: where the icon can be found
 #   - gravatar: whether to create a favicon from your Gravatar
-favicon: 
+favicon:
   desktop:
     url: /images/favicon.ico
     gravatar: false
@@ -102,7 +101,7 @@ page_width: 48
 rss: false
 
 # Turn your web pages into graph objects (see http://ogp.me).
-open_graph: 
+open_graph:
   fb_app_id:
   fb_admins:
   twitter_id:
@@ -114,12 +113,12 @@ open_graph:
 ##############################################################################
 
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
-disqus: 
+disqus:
   enabled: false
   shortname: cactus-1
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
-google_analytics: 
+google_analytics:
   enabled: false
   id: UA-86660611-1
 
