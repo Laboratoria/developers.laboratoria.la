@@ -4,7 +4,7 @@ This document has a series of conventions and suggestions that we could adopt in
 
 ## Commit Message conversions
 
-Follow the [Argular commit message](https://gist.github.com/stephenparish/9941e89d80e2bc58a153#format-of-the-commit-message).
+Follow the [Angular commit message](https://gist.github.com/stephenparish/9941e89d80e2bc58a153#format-of-the-commit-message).
 
 ## Branch Naming conversions
 
