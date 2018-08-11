@@ -12,10 +12,10 @@ Follow this branch naming convention by [Stack Overflow](https://stackoverflow.c
 
 *Short well-defined tokens*
 
-**wip** | Works in progress; stuff I know won't be finished soon
-**feat** | Feature I'm adding or expanding
-**bug** | Bug fix
-**test** | About test files 
+* **wip** | Works in progress; stuff I know won't be finished soon
+* **feat** | Feature I'm adding or expanding
+* **bug** | Bug fix
+* **test** | About test files 
 
 ## Pull Request conversions
 
