@@ -33,6 +33,7 @@ Alternate between Wednesdays 1pm and Fridays 9am (Lima time).
 * [@lupomontero](https://github.com/lupomontero): Monday and thursday 4-6pm (Lima time).
 * [@ivandevp](https://github.com/ivandevp): ?
 * [@FabianBravoA](https://github.com/FabianBravoA): ?
+* [@gmoura](https://github.com/gmoura): Monday 2-3pm(Lima time)
 
 ### Contributing
 
