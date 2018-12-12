@@ -137,6 +137,10 @@ All text formats should follow the guidelines provided in our [etiquette](https:
 * HTML
 * Shell/Bash
 
+## Git workflow
+
+See [#22](https://github.com/Laboratoria/developers.laboratoria.la/pull/22)
+
 ## Contributing
 
 Each repository should have a `CONTRIBUTING.md` file with a contributing guide
