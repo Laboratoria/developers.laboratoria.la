@@ -146,7 +146,7 @@ We tag issues as `help-wanted` :wink:
 |----------|-----------|-------------|
 | [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@ivandevp](https://github.com/ivandevp), [@merunga](https://github.com/merunga) | Bootcamp Curriculum (JavaScript)
 | [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX)
-| [course-parser](https://github.com/Laboratoria/course-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLi used to process curriculum topics in Markdown format
+| [curriculum-parser](https://github.com/Laboratoria/curriculum-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLi used to process curriculum topics in Markdown format
 | [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
 | [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
 | [developers](https://github.com/Laboratoria/developers) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura), [@memecast](https://github.com/memecast) | DevsChapter website
