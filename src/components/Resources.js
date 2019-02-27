@@ -6,13 +6,27 @@ const profiles = [
     provider: 'github',
     url: 'https://github.com/Laboratoria/developers',
     // color: '#181717',
-    color: '#f0f0f0',
+    // color: '#f0f0f0',
   },
   {
     provider: 'slack',
     url: 'https://laboratoriala.slack.com/messages/C7TE6F4G7/',
-    color: '#56B68B',
+    // color: '#56B68B',
   },
+  {
+    provider: 'discourse',
+    url: 'http://community.laboratoria.la/',
+    // color: '#ffffff',
+  },
+  {
+    provider: 'medium',
+    url: 'https://medium.com/laboratoria-developers',
+    // color: '#12100E',
+  },
+  {
+    provider: 'youtube',
+    url: 'https://www.youtube.com/channel/UCuWmQYAvytwSl6tqjOxV5Ow',
+  }
 ];
 
 
@@ -26,10 +40,10 @@ const SimpleIcon = ({ profile }) => (
 
 
 const Resources = props => (
-  <Section>
-    <h2>Dónde encontrarnos</h2>
+  <Section className="resources">
+    <h2>Recursos</h2>
     {profiles.map(profile => (
-      <a key={profile.url} href={profile.url} target="_blank">
+      <a key={profile.url} href={profile.url} target="_blank" style={{ display: 'inline-block', width: 48, height: 48 }}>
         <SimpleIcon profile={profile} />
       </a>
     ))}

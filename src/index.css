@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Open+Sans');
 
 html, body, a {
   margin: 0;
@@ -6,8 +6,12 @@ html, body, a {
 }
 
 body {
-  background-color: #333;
-  font-family: 'Raleway', sans-serif;
+  /* background-color: #FF009E; */
+  /* background-color: #FFE521; */
+  /* background-color: #56F89A; */
+  /* background-color: #222; */
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
   color: #777;
   padding: 5%;
   max-width: 1240px;
@@ -15,8 +19,7 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Bitter', sans-serif;
 }
 
 h2 {
@@ -24,16 +27,16 @@ h2 {
 }
 
 a {
-  color: #F7B617;
+  color: #FF009E;
   text-decoration: none;
 }
 
 a:hover {
   color: #ccc;
-  background-color: #222;
+  background-color: #FF009E;
 }
 
-/*
+
 canvas {
   filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
   -webkit-filter: grayscale(1);
@@ -45,4 +48,7 @@ canvas:hover {
   -webkit-filter: none;
   filter: none;
 }
-*/
+
+/* .resources a:hover {
+  background-color: transparent;
+} */

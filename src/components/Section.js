@@ -5,16 +5,17 @@ const styles = {
   root: {
     // display: 'flex',
     // justifyContent: 'center',
-    borderTop: '1px solid #444',
+    // borderTop: '1px solid #444',
     margin: '24px 0',
+    padding: 20,
     textAlign: 'center',
   },
 };
 
 
-const Section = props => (
-  <section style={{ ...styles.root, ...(props.style || {}) }}>
-    {props.children}
+const Section = ({ style, children, ...props }) => (
+  <section style={{ ...styles.root, ...(style || {}) }} {...props}>
+    {children}
   </section>
 );
 
