@@ -22,6 +22,8 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
 * [Rituals](#rituals)
 * [Products](#products)
 * [Stack](#stack)
+* [Coding standards](#coding-standards)
+* [Git Workflow](#git-workflow)
 * [Code of conduct](#code-of-conduct)
 
 ***
@@ -91,6 +93,9 @@ provide these _office hours_:
 
 We tag issues as `help-wanted` :wink:
 
+Each repository should have a `CONTRIBUTING.md` file with a contributing guide
+for potential contributors.
+
 ***
 
 ## Products
@@ -127,7 +132,7 @@ Docs: https://laboratoria.github.io/api.laboratoria.la/
 
 Learning Management System (LMS)
 
-- PM: [@chamodev](https://github.com/chamodev)
+* PM: [@chamodev](https://github.com/chamodev)
 * Tech lead: [@xpktro](https://github.com/xpktro)
 * Devs: [@MaiaRojas](https://github.com/MaiaRojas), [@corosteg](https://github.com/corosteg)
   [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
@@ -177,7 +182,10 @@ TDD, and if it can be a _pure function_, it must be one.
 ### Backend
 
 * [Firebase](https://firebase.google.com/) (hosting)
+* [Firebase functions](https://firebase.google.com/docs/functions/) (hosting)
 * [Firestore](https://firebase.google.com/docs/firestore/) (database)
+* MongoDB / Atlas
+* Express
 
 ### Frontend
 
@@ -189,7 +197,9 @@ front-end (article is in spanish).
 * [Webpack](https://webpack.js.org/)
 * [Redux](https://redux.js.org/)
 * [React](https://reactjs.org/)
-* [Material UI](https://material-ui.com/)
+* [Material UI](https://material-ui.com/) ????
+* `create-react-app` ???
+* Boilerplate ???
 
 ### Testing and CI
 
@@ -197,25 +207,60 @@ front-end (article is in spanish).
 * [Jest](https://jestjs.io/)
 * [Travis CI](https://travis-ci.org/)
 
-### Coding standards
+***
+
+## Coding standards
 
 All text formats should follow the guidelines provided in our [etiquette](https://github.com/Laboratoria/etiquette#writing), including
 [plain text](https://github.com/Laboratoria/etiquette#plain-text) and
 [markdown](https://github.com/Laboratoria/etiquette#markdown).
 
-* [Javascript](https://github.com/airbnb/javascript)
-* [React/JSX](https://github.com/airbnb/javascript/tree/master/react)
-* [CSS](https://github.com/airbnb/css)
-* HTML
-* Shell/Bash
+### [Javascript](https://github.com/airbnb/javascript)
 
-### Contributing
+[`eslint-config-airbnb-base`](https://github.com/airbnb/javascript)
 
-Each repository should have a `CONTRIBUTING.md` file with a contributing guide
-for potential contributors.
+```sh
+yarn add -D eslint eslint-config-airbnb-base eslint-plugin-import
+```
+
+`.eslintrc`
+
+`.eslintignore`
+
+### Node.js
+
+`v8` vs `v10`
+
+`require` vs `import` ???
+
+Package manager? `yarn` vs `npm` ???
+
+`npm` in cli apps ???
+
+### [React/JSX](https://github.com/airbnb/javascript/tree/master/react)
+
+[`eslint-config-airbnb`](https://github.com/airbnb/javascript/tree/master/react)
+
+### CSS
+
+[`airbnb/css`](https://github.com/airbnb/css)
+
+### HTML
+
+???
+
+### Shell/Bash
+
+???
+
+***
+
+## Git Workflow
+
+See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ***
 
 ## Code of conduct
 
-See [#20](https://github.com/Laboratoria/developers.laboratoria.la/pull/20)
+See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
