@@ -24,6 +24,9 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
 * [Stack](#stack)
 * [Coding standards](#coding-standards)
 * [Git Workflow](#git-workflow)
+* [Internationalisation](#internationalisation)
+* [Releases](#releases)
+* [Deployment](#deployment)
 * [Code of conduct](#code-of-conduct)
 
 ***
@@ -112,6 +115,7 @@ for potential contributors.
 | [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
 | [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
 | [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura) | DevsChapter website
+| [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | ?? | ??
 
 ### Private repos
 
@@ -165,6 +169,10 @@ Laboratoria Admin CLI
 #### L4B???
 
 * PM: [@claudiaalf](https://github.com/claudiaalf)
+
+#### laboratoria-ui
+
+???
 
 ***
 
@@ -257,7 +265,32 @@ Package manager? `yarn` vs `npm` ???
 
 ## Git Workflow
 
+Git Hooks?? Husky? @gmoura???
+
 See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
+
+***
+
+## Internationalisation
+
+`react-intl`
+
+***
+
+## Releases
+
+???
+
+***
+
+## Deployment
+
+* DNS
+* SSL
+* Node / Now
+* Cloud functions
+* Static hosting
+* Atlas
 
 ***
 
