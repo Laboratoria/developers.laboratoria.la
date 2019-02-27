@@ -31,8 +31,11 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
 
 The main channels of communication are:
 
+* The website at [developers.laboratoria.la](http://developers.laboratoria.la/)
 * The [#developers channel Laboratoria's Slack](https://laboratoriala.slack.com/messages/C7TE6F4G7/)
 * The [DevsChapter category on our forum at community.laboratoria.la](http://community.laboratoria.la/c/devs-chapter)
+* [This repo](https://github.com/Laboratoria/developers.laboratoria.la/) with
+  info and guidelines.
 * The [repos under the Laboratoria org on GitHub](https://github.com/Laboratoria)
   (repos, projects, issues, milestones, ...)
 * The [developers blog on Medium](https://medium.com/laboratoria-developers)
@@ -43,18 +46,47 @@ The main channels of communication are:
 
 ## Rituals
 
-### Hangouts every 2 weeks
+### Monthly hangouts
 
 Announced in the [DevsChapter category on our forum at community.laboratoria.la](http://community.laboratoria.la/c/devs-chapter).
 
+NOTE: This is currently being discussed [here](https://github.com/Laboratoria/developers.laboratoria.la/issues/25).
+
 View [calendar](https://calendar.google.com/calendar/embed?src=laboratoria.la_vhr2j0gerq2oidffm14fo3tuio%40group.calendar.google.com&ctz=America%2FLima).
+
+### Pair programming
+
+As part of the chapter, we encourage peer-learning and peer-review. As such, we
+recommend devs pairing up with peers (both product devs and coaches) when
+designing and implmenting software.
+
+A clearer way for achieving this in practice still needs to be agreed.
+
+### Code review
+
+As a rule of thumb, every PR that will potentially end up in _production_ (as in
+a release that will be used by other people), should have been reviewed by at
+least two people. Each product/project has its own _rules_ and _conventions_,
+but ideally repos will enforce reviews.
+
+When sending a PR with new features always include context, design proposal and
+instructions on how to test/verify the changes. Reviewing is hard, let's always
+try to make it as easy as possible for potential reviewers.
 
 ### Office hours
 
-* [@lupomontero](https://github.com/lupomontero): Monday and thursday 4-6pm (Lima time).
-* [@ivandevp](https://github.com/ivandevp): ?
-* [@FabianBravoA](https://github.com/FabianBravoA): ?
-* [@gmoura](https://github.com/gmoura): Monday 2-3pm(Lima time)
+All devs are encouraged to seek _office hours_ with more senior devs (or other
+peers) in order to answer questions, ask for help, deep dive into a topic, ...
+or whatever you may be struggling with.
+
+In order to book _office hours_ please contact directly the dev you'd like to
+book time with (via Slack). The following devs have offered themeselves to
+provide these _office hours_:
+
+* [@lupomontero](https://github.com/lupomontero)
+* [@FabianBravoA](https://github.com/FabianBravoA)
+* [@gmoura](https://github.com/gmoura)
+* [@xpktro](https://github.com/xpktro)
 
 ### Contributing
 
@@ -68,14 +100,13 @@ We tag issues as `help-wanted` :wink:
 
 - PM: [@lupomontero](https://github.com/lupomontero), [@bouli](https://github.com/bouli)
 - [@lupomontero](https://github.com/lupomontero)
-- [@ivandevp](https://github.com/ivandevp)
+- [@xpktro](https://github.com/xpktro)
 
 ### LMS
 
 - PM: [@chamodev](https://github.com/chamodev)
-- [@ivandevp](https://github.com/ivandevp)
+- [@xpktro](https://github.com/xpktro)
 - [@MaiaRojas](https://github.com/MaiaRojas)
-- [@AnaSalazar](https://github.com/AnaSalazar)
 - [@corosteg](https://github.com/corosteg)
 
 ### Admission
@@ -100,6 +131,7 @@ We tag issues as `help-wanted` :wink:
 
 - PM: Franco???
 - [@FabianBravoA](https://github.com/FabianBravoA)
+- [@AnaSalazar](https://github.com/AnaSalazar)
 - [@brecabal](https://github.com/brecabal)
 
 [Developers Team on GitHub](https://github.com/orgs/Laboratoria/teams/developers/members)
