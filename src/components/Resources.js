@@ -4,7 +4,7 @@ import Section from './Section';
 const profiles = [
   {
     provider: 'github',
-    url: 'https://github.com/Laboratoria/developers',
+    url: 'https://github.com/Laboratoria/developers.laboratoria.la',
     // color: '#181717',
     // color: '#f0f0f0',
   },
