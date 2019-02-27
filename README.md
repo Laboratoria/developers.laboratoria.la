@@ -279,7 +279,13 @@ See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ## Releases
 
-???
+TBD
+
+`tags`
+
+`semver`
+
+`npm version patch -m "bump to %s"`
 
 ***
 
