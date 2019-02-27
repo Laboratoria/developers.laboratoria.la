@@ -1,12 +1,29 @@
-# Laboratoria Developers
+# Laboratoria Developers Chapter
 
-Laboratoria's DevsChapter is an online community made up of all the
-developers that work with us. That includes any Laboratorian that fits the
-developer profile: _coaches_, _developers_ working on software products, content
-contributors, ...
+**The Developers Chapter at Laboratoria is a community made up of all the
+developers within the organisation**. That includes any Laboratorian that fits the
+developer profile: _developers_ working on software products, _coaches_, ...
+
+The DevsChapter's **main goal is to promote peer learning, sharing and
+cross-pollination across teams**. The community has a bunch of resources to
+enable collaboration, sharing and support among devs.
+
+The DevsChapter **also serves as the purpose of providing design, implementation
+and collaboration guidelines**.
 
 As part of the team at Laboratoria, we invite you to familiarise yourself with
 our [digital etiquette](https://github.com/Laboratoria/etiquette).
+
+***
+
+## TOC
+
+* [Resources](#resources)
+* [Rituals](#rituals)
+* [Teams](#teams)
+* [Products](#products)
+* [Stack](#stack)
+* [Code of conduct](#code-of-conduct)
 
 ***
 
