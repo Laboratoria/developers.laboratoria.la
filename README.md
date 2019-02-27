@@ -20,7 +20,6 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
 
 * [Resources](#resources)
 * [Rituals](#rituals)
-* [Teams](#teams)
 * [Products](#products)
 * [Stack](#stack)
 * [Code of conduct](#code-of-conduct)
@@ -94,83 +93,44 @@ We tag issues as `help-wanted` :wink:
 
 ***
 
-## Teams
-
-### API
-
-- PM: [@lupomontero](https://github.com/lupomontero), [@bouli](https://github.com/bouli)
-- [@lupomontero](https://github.com/lupomontero)
-- [@xpktro](https://github.com/xpktro)
-
-### LMS
-
-- PM: [@chamodev](https://github.com/chamodev)
-- [@xpktro](https://github.com/xpktro)
-- [@MaiaRojas](https://github.com/MaiaRojas)
-- [@corosteg](https://github.com/corosteg)
-
-### Admission
-
-- PM: [@danielasarzosa](https://github.com/danielasarzosa)
-- [@arun1595](https://github.com/arun1595)
-
-### Bootcamp curriculum
-
-- PMs: [@diegovelezg](https://github.com/diegovelezg), [@CaroLaboratoria](https://github.com/CaroLaboratoria)
-- [@lupomontero](https://github.com/lupomontero)
-- [@lalogf](https://github.com/lalogf)
-- [@rocioalberdi](https://github.com/rocioalberdi)
-
-### Job Placement
-
-- PM: [@andreamarianalm](https://github.com/andreamarianalm)
-- [@gmoura](https://github.com/gmoura)
-- [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
-
-### Alumnae
-
-- PM: Franco???
-- [@FabianBravoA](https://github.com/FabianBravoA)
-- [@AnaSalazar](https://github.com/AnaSalazar)
-- [@brecabal](https://github.com/brecabal)
-
-[Developers Team on GitHub](https://github.com/orgs/Laboratoria/teams/developers/members)
-
-***
-
 ## Products
 
 ### Open Source
 
 | Product |  Maintainers  | Description |
 |----------|-----------|-------------|
-| [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@ivandevp](https://github.com/ivandevp), [@merunga](https://github.com/merunga) | Bootcamp Curriculum (JavaScript)
+| [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@merunga](https://github.com/merunga), [@rafaelbcerri](https://github.com/rafaelbcerri), [@gmoura](https://github.com/gmoura) | Bootcamp Curriculum (JavaScript)
 | [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX)
 | [curriculum-parser](https://github.com/Laboratoria/curriculum-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLi used to process curriculum topics in Markdown format
+| [schemas](https://github.com/Laboratoria/schemas) | [@lupomontero](https://github.com/lupomontero) | ...
+| [models](https://github.com/Laboratoria/models) | [@lupomontero](https://github.com/lupomontero) | ... (does this need to be public?)
 | [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
 | [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
-| [developers](https://github.com/Laboratoria/developers) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura), [@memecast](https://github.com/memecast) | DevsChapter website
+| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura) | DevsChapter website
 
 ### Private repos
 
-#### API
+#### [api.laboratoria.la](https://github.com/Laboratoria/api.laboratoria.la)
 
 HTTP JSON API.
 
-* PM: @diegovelezg, [@lupomontero](https://github.com/lupomontero)
+* PM: [@bouli](https://github.com/bouli)
 * Tech lead: [@lupomontero](https://github.com/lupomontero)
+* Devs: [@xpktro](https://github.com/xpktro), [@MaiaRojas](https://github.com/MaiaRojas),
+  [@corosteg](https://github.com/corosteg)
+* Kanban: ?
+* Tracker: https://github.com/Laboratoria/api.laboratoria.la/issues
 
-Repo: [api.laboratoria.la](https://github.com/Laboratoria/api.laboratoria.la)
+Docs: https://laboratoria.github.io/api.laboratoria.la/
 
 #### [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
 
 Learning Management System (LMS)
 
-* PMs: [@chamodev](https://github.com/chamodev), [@danielasarzosa](https://github.com/danielasarzosa)
-  (admission), [@claudiaalf](https://github.com/claudiaalf) (l4b)
-* Tech lead: [@ivandevp](https://github.com/ivandevp)
-* Devs: [@FabianBravoA](https://github.com/FabianBravoA), [@MaiaRojas](https://github.com/MaiaRojas),
-  [@arun1595](https://github.com/arun1595), [@AnaSalazar](https://github.com/AnaSalazar)
+- PM: [@chamodev](https://github.com/chamodev)
+* Tech lead: [@xpktro](https://github.com/xpktro)
+* Devs: [@MaiaRojas](https://github.com/MaiaRojas), [@corosteg](https://github.com/corosteg)
+  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
 
 #### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
 
@@ -178,13 +138,28 @@ Job Placemente App
 
 * PM: [@andreamarianalm](https://github.com/andreamarianalm)
 * Tech lead: [@gmoura](https://github.com/gmoura)
-* Devs: [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
+* Devs: [@rafaelbcerri](https://github.com/rafaelbcerri)
 
 #### [Admin](https://github.com/Laboratoria/admin)
 
 Laboratoria Admin CLI
 
 * Tech lead: [@lupomontero](https://github.com/lupomontero)
+
+#### [admissions.laboratoria.la](#)
+
+* PM: [@danielasarzosa](https://github.com/danielasarzosa)
+* Tech lead: [@arun1595](https://github.com/arun1595)
+
+#### Alumnae??
+
+* PM: Franco???
+* Tech lead: [@FabianBravoA](https://github.com/FabianBravoA)
+* Devs: [@AnaSalazar](https://github.com/AnaSalazar)
+
+#### L4B???
+
+* PM: [@claudiaalf](https://github.com/claudiaalf)
 
 ***
 
