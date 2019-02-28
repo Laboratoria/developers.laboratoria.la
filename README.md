@@ -8,7 +8,7 @@ The DevsChapter's **main goal is to promote peer learning, sharing and
 cross-pollination across teams**. The community has a bunch of resources to
 enable collaboration, sharing and support among devs.
 
-The DevsChapter **also serves as the purpose of providing design, implementation
+The DevsChapter **also serves the purpose of providing design, implementation
 and collaboration guidelines**.
 
 As part of the team at Laboratoria, we invite you to familiarise yourself with
@@ -37,6 +37,7 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
     + [laboratoria-ui](#laboratoria-ui)
     + [L4B](#)
     + [www.laboratoria.la](#www.laboratoria.la)
+    + [community.laboratoria.la](#community.laboratoria.la)
 * [Stack](#stack)
   - [Core](#core)
   - [Backend](#backend)
@@ -57,11 +58,12 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
 * [Deployment](#deployment)
   - [Domains](#domains)
   - [DNS](#dns)
-  - [Node.js modules](#nodejs-modules)
+  - [SSL](#ssl)
+  - [Node.js modules and CLI tools](#nodejs-modules-and-cli-tools)
   - [Node.js servers](#nodejs-servers)
   - [Cloud functions](#cloud-functions)
   - [Static hosting](#static-hosting)
-  - [MongoDB](#mongodb)
+  - [Databases](#databases)
   - [Continuous delivery](#continuous-delivery)
 * [Code of conduct](#code-of-conduct)
 
@@ -184,7 +186,7 @@ programs.
 
 #### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
 
-Job Placemente App
+Job Placement App
 
 * PM: [@andreamarianalm](https://github.com/andreamarianalm)
 * Tech lead: [@gmoura](https://github.com/gmoura)
@@ -193,8 +195,11 @@ Job Placemente App
 
 #### [admission.laboratoria.la](https://github.com/Laboratoria/admission.laboratoria.la)
 
+An application for applicants of Laboratoria to go through the admission process.
+
 * PM: [@danielasarzosa](https://github.com/danielasarzosa)
-* Tech lead: [@arun1595](https://github.com/arun1595)
+* Tech lead: [@xpktro](https://github.com/xpktro)
+* Devs: [@arku](https://github.com/arku)
 
 #### alumnae.laboratoria.la
 
@@ -219,6 +224,10 @@ CLI tool used for amdin tasks related to API and LMS.
 #### www.laboratoria.la
 
 Instapage???
+
+#### [community.laboratoria.la](http://community.laboratoria.la/)
+
+???
 
 ***
 
@@ -502,6 +511,10 @@ For example:
 
 ## Deployment
 
+Each repo should have detailed deployment documentation available in the repo's
+`README.md` file. In this document we aim to provide some context and guidelines
+for different kind of repos.
+
 ### Domains
 
 Our domain name registrations are managed via [Digital Ocean](https://www.digitalocean.com/).
@@ -518,13 +531,46 @@ protection as well as free SSL and other useful features.
 
 ???
 
-### Node.js modules
+* [x] https://www.laboratoria.la/ (???)
+* [x] https://api.laboratoria.la/ (SSL provided by Firebase)
+* [x] https://lms.laboratoria.la/ (SSL provided by Firebase)
+* [x] https://app.talento.laboratoria.la/ (???)
+* [ ] http://community.laboratoria.la/ :warning:
+* [ ] http://developers.laboratoria.la/ :warning:
+
+### Node.js modules and CLI tools
+
+For the time being we are using GitHub releases for our `npm` _modules_ and CLI
+tools. This means that modules can be installed via
+`npm i Laboratoria/repo-name#tag`, or adding to your `package.json`.
+
+Example as dependency in `package.json`:
+
+```json
+{
+  "dependencies": {
+    "schemas": "Laboratoria/schemas#v1.0.0-alpha.3"
+  }
+}
+```
+
+Example installing the `curriculum-parser` globally:
+
+```sh
+# install current release
+npm i -g Laboratoria/curriculum-parser
+
+# install a specific version
+npm i -g "Laboratoria/curriculum-parser#v2.0.0-alpha.2"
+```
 
 GitHub vs NPM Orgs???
 
 ### Node.js Servers
 
 Zeit.co vs Docker vs VM
+
+talento.laboratoria.la y api-next???
 
 ### Cloud functions
 
@@ -535,22 +581,101 @@ Firebase functions
 * Firebase hosting
 * ...
 
-### MongoDB
+### Databases
+
+Firestore
+
+MongoDB
 
 Atlas vs Docker vs VM
 
 ### Continuous delivery
 
-Travis...
+Projects requiring _deployment_ to 3rd party service (ie: Firebase, Zeit, NPM,
+...) should aim to use _continuous delivery_ using
+[Travis' Deployment features](https://docs.travis-ci.com/user/deployment).
 
-`.travis.yml`
+Let's see an example using a custom script to deploy Firebase.
+
+Let's start with the `package.json`. The important thing here is that we have
+a `deploy` key in `scripts`:
+
+```json
+{
+  "scripts": {
+    "deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "firebase-tools": "6.4.0"
+  }
+}
+```
+
+This will allow us to manually invoke our deploy command:
+
+```sh
+npm run deploy
+
+# or passing some flags...
+npm run deploy --project staging-env
+npm run deploy --only functions
+```
+
+Now that we have defined our `deploy` task as an `npm-script`, let's look at the
+deploy script that we want Travis to trigger. In this example we will use a
+shell script (ie: `scripts/deploy.sh`):
+
+```sh
+#! /usr/bin/env bash
+
+deploy() {
+  echo "Deploying to project ${1}..."
+  npm run deploy --project ${1} --token "$FIREBASE_TOKEN"
+}
+
+if [[ "${TRAVIS_TAG}" == v* ]]; then
+  deploy production-env
+elif [[ "$TRAVIS_BRANCH" == "develop" ]]; then
+  deploy staging-env
+else
+  echo "ignoring branch ${TRAVIS_BRANCH}..."
+  exit 0
+fi
+```
+
+As we see in our script, we are assuming an environment variable called
+`FIREBASE_TOKEN` exists (and hopefully with the right value). We do not want to
+add _secrets_ like this token to the source code, and we want to make sure they
+remain secret. To achieve this we use [encrypted environment variables](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml).
+To do so you will need to install the [`travis` CLI tool](https://github.com/travis-ci/travis.rb#installation).
+
+```sh
+gem install travis -v 1.8.9 --no-rdoc --no-ri
+```
+
+Now that we have the `travis` CLI, we can create a Firebase CI token and then
+encrypt it.
+
+```sh
+# This generates a token, e.g. "1/AD7sdasdasdKJA824OvEFc1c89Xz2ilBlaBlaBla"
+firebase login:ci
+
+# Encrypt the token
+travis encrypt FIREBASE_TOKEN="1/AD7sdasdasdKJA824OvEFc1c89Xz2ilBlaBlaBla" --add
+```
+
+The `--add` flag in the previous command should automatically add the encrypted
+variable to your `.travis.yml`. Now it's time to add the `deploy` (and
+optionally `before_deploy` keys to our `.travis.yml`:
 
 ```yml
 language: node_js
 node_js:
   - 10
+env:
+  - secure: "XXXXXXXXXXXX="
 before_deploy:
-  - echo "Do something before deploy!"
+  - echo "Do something before deploying!"
 deploy:
   provider: script
   script: ./scripts/deploy.sh
@@ -559,18 +684,6 @@ deploy:
     repo: Laboratoria/some-repo
     all_branches: true
 ```
-
-`package.json`
-
-```json
-{
-  "scripts": {
-    "deploy": "./scripts/deploy"
-  }
-}
-```
-
-`npm run deploy`
 
 ***
 
