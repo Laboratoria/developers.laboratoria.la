@@ -34,7 +34,6 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
     + [admission.laboratoria.la](#admission.laboratoria.la)
     + [alumnae.laboratoria.la](#)
     + [laboratoria-admin](#laboratoria-admin)
-    + [laboratoria-ui](#laboratoria-ui)
     + [L4B](#)
     + [www.laboratoria.la](#www.laboratoria.la)
     + [community.laboratoria.la](#community.laboratoria.la)
