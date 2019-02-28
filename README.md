@@ -535,8 +535,8 @@ protection as well as free SSL and other useful features.
 * [x] https://api.laboratoria.la/ (SSL provided by Firebase)
 * [x] https://lms.laboratoria.la/ (SSL provided by Firebase)
 * [x] https://app.talento.laboratoria.la/ (???)
+* [x] http://developers.laboratoria.la/ (SSL provided by GitHub Pages)
 * [ ] http://community.laboratoria.la/ :warning:
-* [ ] http://developers.laboratoria.la/ :warning:
 
 ### Node.js modules and CLI tools
 
