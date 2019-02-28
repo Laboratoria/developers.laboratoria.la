@@ -188,9 +188,16 @@ programs.
 
 Job Placement App
 
+It's public website to show your graduate's profiles to the hiring companies.
+
 * PM: [@andreamarianalm](https://github.com/andreamarianalm)
 * Tech lead: [@gmoura](https://github.com/gmoura)
 * Devs: [@rafaelbcerri](https://github.com/rafaelbcerri)
+* Kanban: https://github.com/Laboratoria/talento.laboratoria.la/projects/3
+* Tracker: https://github.com/Laboratoria/talento.laboratoria.la/issues
+* Architecture: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Architecture
+* Git Workflow: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Git-workflow
+* Stack: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Stack
 * URL: https://app.talento.laboratoria.la/
 
 #### [admission.laboratoria.la](https://github.com/Laboratoria/admission.laboratoria.la)
@@ -213,9 +220,13 @@ CLI tool used for amdin tasks related to API and LMS.
 
 * Tech lead: [@lupomontero](https://github.com/lupomontero)
 
-#### laboratoria-ui
+#### [laboratoria-ui](https://github.com/Laboratoria/ui)
 
-???
+It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.`
+
+* Maintainers: [@gmoura](https://github.com/gmoura) [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
+
+* URL: https://laboratoria-ui.netlify.com/
 
 #### L4B???
 
