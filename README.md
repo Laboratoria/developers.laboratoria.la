@@ -36,6 +36,7 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
     + [laboratoria-admin](#laboratoria-admin)
     + [laboratoria-ui](#laboratoria-ui)
     + [L4B](#)
+    + [www.laboratoria.la](#www.laboratoria.la)
 * [Stack](#stack)
   - [Core](#core)
   - [Backend](#backend)
@@ -50,9 +51,18 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
   - [HTML](#html)
   - [Shell](#shell)
 * [Git Workflow](#git-workflow)
+* [Dependency management](#dependency-management)
 * [Internationalisation](#internationalisation)
 * [Releases](#releases)
 * [Deployment](#deployment)
+  - [Domains](#domains)
+  - [DNS](#dns)
+  - [Node.js modules](#nodejs-modules)
+  - [Node.js servers](#nodejs-servers)
+  - [Cloud functions](#cloud-functions)
+  - [Static hosting](#static-hosting)
+  - [MongoDB](#mongodb)
+  - [Continuous delivery](#continuous-delivery)
 * [Code of conduct](#code-of-conduct)
 
 ***
@@ -206,6 +216,10 @@ CLI tool used for amdin tasks related to API and LMS.
 
 * PM: [@claudiaalf](https://github.com/claudiaalf)
 
+#### www.laboratoria.la
+
+Instapage???
+
 ***
 
 ## Stack
@@ -299,11 +313,21 @@ Make sure your `package.json` includes a `pretest` _script_ (as in
 
 `.travis.yml`
 
+```yml
+language: node_js
+node_js:
+  - 8
+  - 10
+```
+
 Status badge
 
 #### Code coverage
 
-`jest --coverage`
+```sh
+npx jest --coverage
+xdg-open coverage/lcov-report/index.html
+```
 
 Coveralls??
 
@@ -373,6 +397,18 @@ See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ***
 
+## Dependency management
+
+When and how to upgrade deps.
+
+Semver (`^`, `~` and pinning deps).
+
+`npm` vs `yarn`
+
+Lock files (when to add to git and when not to).
+
+***
+
 ## Internationalisation, localisaion and translation
 
 `react-intl`
@@ -381,24 +417,160 @@ See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ## Releases
 
-TBD
+We aim to use Git, GitHub, NPM and Travis for all (or most) repos, and our
+release process relies heavily on these. By this we mean that releases MUST:
 
-`tags`
+1. Pass all tests (`npm test`).
+2. Have coverage above 80% (`npx jest --coverage`).
+3. Increase the version number in `package.json`.
+3. Be _tagged_ using the following format: `v` followed by a [`semver`](https://semver.org/)
+   version (ie: `v1.0.0`, `v2.3.11`, `v2.0.0-alpha.1`, ...).
+4. Push tag to _upstream_'s `master` branch.
+5. Include _title_, _description_, _changelog_, upgrade instructions, ... in
+   GitHub release.
+6. Be installable via `npm i Laboratoria/repo-name#version-tag` is an `npm`
+   _module_ or CLI tool.
+7. Be _deployable_ via `npm deploy`.
 
-`semver`
+Example using `git` and `npm` (with manual deploy):
 
-`npm version patch -m "bump to %s"`
+```sh
+# Releases are normally tagged from `master`, so we switch to `master` if we are
+# on a different branch.
+git checkout master
+
+# Merge in `develop` branch if not already merged.
+git merge develop
+
+npm test
+npx jest --coverage
+
+# Run build if required
+npm run build
+
+# The following command increases the "patch" number in `package.json` and adds
+# a new `git` "tag" (ie: for version 1.0.0 it creates tag "v1.0.0").
+npm version patch -m "bump to %s"
+
+# We can also increase minor and major numbers with `npm version`:
+# npm version minor -m "bump to %s"
+# npm version major -m "bump to %s"
+
+# Once we have tagged our release we push the new tag to upstream master
+git push upstream master --tags
+
+# Check Travis build
+
+npm run deploy
+
+# Go back to develop branch and update it with master's changes
+git checkout develop
+git merge master
+git push upstream develop
+```
+
+### A few notes on version numbers and semver
+
+We adhere to the Semantic Versioning as described here: https://semver.org/
+
+We also use `git` _tags_ with a `v` followed by the release number.
+
+#### Releases
+
+* Major (new API, breaking changes)
+* Minor (new features, internals, backwards compatible non-breaking changes)
+* Patch (hot fixes and minor patches)
+
+Example: `2.1.3` (major: `2`, minor: `1`, patch: `3`)
+
+#### Pre-releases
+
+The same as with _releases_, but adding the `alpha`, `beta` or `bc` plus a
+number. Pre-releases are not normally used for _patches_.
+
+* `alpha`: implies unstable implementation in design stage.
+* `beta`: denotes a _pre-release_ is ready to be tested with _users_ in a
+  controlled environment, still open to changes and redesign.
+* `rc`: (_release candidate_) is used when design is locked and only minor issues
+  are still to be addressed.
+
+For example:
+
+`2.0.0-alpha.1` < `2.0.0-alpha.2` < `2.0.0-beta.1` < `2.0.0-rc.1` < `2.0.0-rc.2` < `2.0.0` < `2.0.1` < `2.1.0` < `3.0.0-alpha.1`
 
 ***
 
 ## Deployment
 
-* DNS
-* SSL
-* Node / Now
-* Cloud functions
-* Static hosting
-* Atlas
+### Domains
+
+Our domain name registrations are managed via [Digital Ocean](https://www.digitalocean.com/).
+
+* `laboratoria.la`
+
+### DNS
+
+We currently use [Digital Ocean](https://www.digitalocean.com/) to manage DNS. A
+proposal was made a while ago to move DNS to CloudFlare in order to get DDoS
+protection as well as free SSL and other useful features.
+
+### SSL
+
+???
+
+### Node.js modules
+
+GitHub vs NPM Orgs???
+
+### Node.js Servers
+
+Zeit.co vs Docker vs VM
+
+### Cloud functions
+
+Firebase functions
+
+### Static hosting
+
+* Firebase hosting
+* ...
+
+### MongoDB
+
+Atlas vs Docker vs VM
+
+### Continuous delivery
+
+Travis...
+
+`.travis.yml`
+
+```yml
+language: node_js
+node_js:
+  - 10
+before_deploy:
+  - echo "Do something before deploy!"
+deploy:
+  provider: script
+  script: ./scripts/deploy.sh
+  skip_cleanup: true
+  on:
+    repo: Laboratoria/some-repo
+    all_branches: true
+```
+
+`package.json`
+
+```json
+{
+  "scripts": {
+    "deploy": "./scripts/deploy"
+  }
+}
+```
+
+`npm run deploy`
 
 ***
 
