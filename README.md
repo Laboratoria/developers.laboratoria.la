@@ -107,15 +107,15 @@ for potential contributors.
 
 | Product |  Maintainers  | Description |
 |----------|-----------|-------------|
-| [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@merunga](https://github.com/merunga), [@rafaelbcerri](https://github.com/rafaelbcerri), [@gmoura](https://github.com/gmoura) | Bootcamp Curriculum (JavaScript)
-| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX)
-| [curriculum-parser](https://github.com/Laboratoria/curriculum-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLi used to process curriculum topics in Markdown format
-| [schemas](https://github.com/Laboratoria/schemas) | [@lupomontero](https://github.com/lupomontero) | ...
-| [models](https://github.com/Laboratoria/models) | [@lupomontero](https://github.com/lupomontero) | ... (does this need to be public?)
-| [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features
-| [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI)
-| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura) | DevsChapter website
-| [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | ?? | ??
+| [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@merunga](https://github.com/merunga), [@rafaelbcerri](https://github.com/rafaelbcerri), [@gmoura](https://github.com/gmoura) | Bootcamp Curriculum (JavaScript).
+| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX).
+| [curriculum-parser](https://github.com/Laboratoria/curriculum-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLI tool used to parse curriculum topics and projects in Markdown format and produce a JSON representation to be later pushed to the _database_.
+| [schemas](https://github.com/Laboratoria/schemas) | [@lupomontero](https://github.com/lupomontero) | Mongoose _schemas_ describing shared entities. This _module_ is meant to be used both in Node.js and in the browser.
+| [models](https://github.com/Laboratoria/models) | [@lupomontero](https://github.com/lupomontero) | Mongoose _models_ based on `schemas`. This _module_ is meant to be used ONLY in Node.js. :warning: Does this need to be public?
+| [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features. This is mainly used to interact with `firestore` as the official `firebase` CLI tool doesn't include much functionality for `firestore`.
+| [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI) used in `curricula-js`.
+| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura) | DevsChapter's _conventions_, guidelines and website.
+| [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | [@lupomontero](https://github.com/lupomontero) | CLI tool used to extract data from Google spreadsheets as JSON.
 
 ### Private repos
 
@@ -271,7 +271,7 @@ See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ***
 
-## Internationalisation
+## Internationalisation, localisaion and translation
 
 `react-intl`
 
