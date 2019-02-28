@@ -20,9 +20,35 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
 
 * [Resources](#resources)
 * [Rituals](#rituals)
+  - [Monthly hangouts](#monthly-hangouts)
+  - [Pair programming](#pair-programming)
+  - [Code review](#code-review)
+  - [Office Hourse](#office-hours)
+  - [Contributing](#contributing)
 * [Products](#products)
+  - [Open Source](#open-source)
+  - [Private repos](#private-repos)
+    + [api.laboratoria.la](#api.laboratoria.la)
+    + [lms.laboratoria.la](#lms.laboratoria.la)
+    + [talento.laboratoria.la](#talento.laboratoria.la)
+    + [admission.laboratoria.la](#admission.laboratoria.la)
+    + [alumnae.laboratoria.la](#)
+    + [laboratoria-admin](#laboratoria-admin)
+    + [laboratoria-ui](#laboratoria-ui)
+    + [L4B](#)
 * [Stack](#stack)
+  - [Core](#core)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+  - [Testing, building and CI](#testing--building-and-CI)
+  - [Other](#other)
 * [Coding standards](#coding-standards)
+  - [JavaScript](#javascript)
+  - [Node.js](#node-js)
+  - [React/JSX](#react-jsx)
+  - [CSS](#css)
+  - [HTML](#html)
+  - [Shell](#shell)
 * [Git Workflow](#git-workflow)
 * [Internationalisation](#internationalisation)
 * [Releases](#releases)
@@ -121,25 +147,30 @@ for potential contributors.
 
 #### [api.laboratoria.la](https://github.com/Laboratoria/api.laboratoria.la)
 
-HTTP JSON API.
+HTTP JSON API sitting on top of our databases (Firestore and MongoDB), offering
+a single point of access for authentication and data from any of our apps. This
+app is currently hosted as [Firebase Cloud Functions](https://firebase.google.com/docs/functions/).
 
 * PM: [@bouli](https://github.com/bouli)
 * Tech lead: [@lupomontero](https://github.com/lupomontero)
 * Devs: [@xpktro](https://github.com/xpktro), [@MaiaRojas](https://github.com/MaiaRojas),
   [@corosteg](https://github.com/corosteg)
-* Kanban: ?
+* Kanban: https://github.com/orgs/Laboratoria/projects/9
 * Tracker: https://github.com/Laboratoria/api.laboratoria.la/issues
-
-Docs: https://laboratoria.github.io/api.laboratoria.la/
+* API Docs: https://laboratoria.github.io/api.laboratoria.la/
+* URL: https://api.laboratoria.la/
 
 #### [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
 
-Learning Management System (LMS)
+Learning Management System (LMS). This is the main web interface used by our
+students (both Bootcamp and L4B) in order to follow our different training
+programs.
 
 * PM: [@chamodev](https://github.com/chamodev)
 * Tech lead: [@xpktro](https://github.com/xpktro)
 * Devs: [@MaiaRojas](https://github.com/MaiaRojas), [@corosteg](https://github.com/corosteg)
   [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
+* URL: https://lms.laboratoria.la/
 
 #### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
 
@@ -148,31 +179,32 @@ Job Placemente App
 * PM: [@andreamarianalm](https://github.com/andreamarianalm)
 * Tech lead: [@gmoura](https://github.com/gmoura)
 * Devs: [@rafaelbcerri](https://github.com/rafaelbcerri)
+* URL: https://app.talento.laboratoria.la/
 
-#### [Admin](https://github.com/Laboratoria/admin)
-
-Laboratoria Admin CLI
-
-* Tech lead: [@lupomontero](https://github.com/lupomontero)
-
-#### [admissions.laboratoria.la](#)
+#### [admission.laboratoria.la](https://github.com/Laboratoria/admission.laboratoria.la)
 
 * PM: [@danielasarzosa](https://github.com/danielasarzosa)
 * Tech lead: [@arun1595](https://github.com/arun1595)
 
-#### Alumnae??
+#### alumnae.laboratoria.la
 
 * PM: Franco???
 * Tech lead: [@FabianBravoA](https://github.com/FabianBravoA)
 * Devs: [@AnaSalazar](https://github.com/AnaSalazar)
 
-#### L4B???
+#### [laboratoria-admin](https://github.com/Laboratoria/admin)
 
-* PM: [@claudiaalf](https://github.com/claudiaalf)
+CLI tool used for amdin tasks related to API and LMS.
+
+* Tech lead: [@lupomontero](https://github.com/lupomontero)
 
 #### laboratoria-ui
 
 ???
+
+#### L4B???
+
+* PM: [@claudiaalf](https://github.com/claudiaalf)
 
 ***
 
@@ -184,8 +216,9 @@ TDD, and if it can be a _pure function_, it must be one.
 ### Core
 
 * JavaScript (E6, ES7, ES8)
-* Node / NPM / [Yarn](https://yarnpkg.com/en/)
+* [Node.js](https://nodejs.org/) / [NPM](https://www.npmjs.com/) / [Yarn](https://yarnpkg.com/en/)
 * Git + GitHub
+* Markdown
 
 ### Backend
 
@@ -209,11 +242,78 @@ front-end (article is in spanish).
 * `create-react-app` ???
 * Boilerplate ???
 
-### Testing and CI
+### Testing, building and CI
 
-* [ESLint](https://eslint.org/)
-* [Jest](https://jestjs.io/)
-* [Travis CI](https://travis-ci.org/)
+#### npm-scripts
+
+As a task runner we use _vanilla_ `npm-scripts`.
+
+```json
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest --verbose --coverage",
+    "build": "./scripts/build.sh",
+    "deploy": "gh-pages -d build"
+  },
+  ...
+}
+```
+
+#### Linter
+
+All projects containing JavaScript should _lint_ the source code using
+[ESLint](https://eslint.org/). Check the [Coding standards](#coding-standards)
+section for details on the different `eslint` configurations used in different
+environments.
+
+Make sure your `package.json` includes a `pretest` _script_ (as in
+`npm-scripts`). For example:
+
+```json
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest --verbose --coverage"
+  },
+  "devDependencies": {
+   "eslint": "^5.13.0",
+   "eslint-config-airbnb-base": "^13.1.0",
+   "eslint-plugin-import": "^2.16.0",
+   "jest": "^24.1.0"
+ }
+}
+```
+
+#### Unit tests
+
+[Jest](https://jestjs.io/)
+
+#### Continuous Integration
+
+[Travis CI](https://travis-ci.org/)
+
+`.travis.yml`
+
+Status badge
+
+#### Code coverage
+
+`jest --coverage`
+
+Coveralls??
+
+### Other
+
+* Zapier
+* TypeForm
+* Spreadsheets
+* Mandrill
+* ...
 
 ***
 
@@ -253,13 +353,15 @@ Package manager? `yarn` vs `npm` ???
 
 [`airbnb/css`](https://github.com/airbnb/css)
 
+JSS??? Styled Components???
+
 ### HTML
 
 ???
 
-### Shell/Bash
+### Shell
 
-???
+Bash???
 
 ***
 
