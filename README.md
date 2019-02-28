@@ -153,6 +153,8 @@ for potential contributors.
 | [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features. This is mainly used to interact with `firestore` as the official `firebase` CLI tool doesn't include much functionality for `firestore`.
 | [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI) used in `curricula-js`.
 | [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura) | DevsChapter's _conventions_, guidelines and website.
+| [laboratoria-ui](https://github.com/Laboratoria/ui) | [@gmoura](https://github.com/gmoura) [@RuthMeryCardenas](https://github.com/RuthMeryCardenas) | It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.
+| [react-project-example](https://github.com/Laboratoria/react-project-example) | [@gmoura](https://github.com/gmoura) | It's our React Project example, based on [create-react-app](https://github.com/facebook/create-react-app) with some features that all projects in Laboratoria must/should be have.
 | [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | [@lupomontero](https://github.com/lupomontero) | CLI tool used to extract data from Google spreadsheets as JSON.
 
 ### Private repos
@@ -219,21 +221,6 @@ An application for applicants of Laboratoria to go through the admission process
 CLI tool used for amdin tasks related to API and LMS.
 
 * Tech lead: [@lupomontero](https://github.com/lupomontero)
-
-#### [laboratoria-ui](https://github.com/Laboratoria/ui)
-
-It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.`
-
-* Maintainers: [@gmoura](https://github.com/gmoura) [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
-* UX/UI: [bgohero](https://github.com/bgohero) [lalogf](https://github.com/lalogf)
-* Figma: https://www.figma.com/file/09a5R3KepA4ghHS6TWqTly/Laboratoria-Style-Guide
-* URL: https://laboratoria-ui.netlify.com/
-
-#### [react-project-base](https://github.com/Laboratoria/react-project-base)
-
-It's our React Boilerplate, based on [create-react-app](https://github.com/facebook/create-react-app) with some features that all projects in Laboratoria must/should be have.
-
-* Tech lead: [@gmoura](https://github.com/gmoura)
 
 #### L4B???
 
