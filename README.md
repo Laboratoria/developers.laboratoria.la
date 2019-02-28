@@ -188,7 +188,7 @@ programs.
 
 Job Placement App
 
-It's public website to show your graduate's profiles to the hiring companies.
+It's public website to show your graduate's profile to the hiring companies.
 
 * PM: [@andreamarianalm](https://github.com/andreamarianalm)
 * Tech lead: [@gmoura](https://github.com/gmoura)
@@ -225,8 +225,15 @@ CLI tool used for amdin tasks related to API and LMS.
 It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.`
 
 * Maintainers: [@gmoura](https://github.com/gmoura) [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
-
+* UX/UI: [bgohero](https://github.com/bgohero) [lalogf](https://github.com/lalogf)
+* Figma: https://www.figma.com/file/09a5R3KepA4ghHS6TWqTly/Laboratoria-Style-Guide
 * URL: https://laboratoria-ui.netlify.com/
+
+#### [react-project-base](https://github.com/Laboratoria/react-project-base)
+
+It's our React Boilerplate, based on [create-react-app](https://github.com/facebook/create-react-app) with some features that all projects in Laboratoria must/should be have.
+
+* Tech lead: [@gmoura](https://github.com/gmoura)
 
 #### L4B???
 
