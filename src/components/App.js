@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/logo.svg';
+import logo from '../img/logo.png';
 import Events from './Events';
 import Resources from './Resources';
 import Members from './Members';
