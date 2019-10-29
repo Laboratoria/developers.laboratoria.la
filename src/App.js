@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './img/logo.png';
+import logo from './img/logo.svg';
 import Intro from './components/Intro';
 import Calendar from './components/Calendar';
 import Resources from './components/Resources';

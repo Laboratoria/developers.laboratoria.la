@@ -1,6 +1,7 @@
 .Members {
   flex-wrap: wrap;
   background-color: #111;
+  background-color: rgba(17, 17, 17, 0.97);
 }
 
 .Members > h2 {

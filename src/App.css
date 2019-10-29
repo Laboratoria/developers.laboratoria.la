@@ -5,13 +5,15 @@
 
 .App header {
   display: flex;
-  color: #666;
+  color: #999;
+  background-color: #222;
 }
 
 .App header img {
   width: 60px;
   border-top-right-radius: 20%;
   border-bottom-right-radius: 20%;
+  background-color: #FF009E;
 }
 
 .App header h1 {

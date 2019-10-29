@@ -8,7 +8,7 @@ const Calendar = () => (
     <h2><Emoji symbol={'💬'} /> Próximo hangout</h2>
     <div>
       <h3>
-        <a href="#">
+        <a href="https://calendar.google.com/calendar/r/week/2019/11/15?eid=NXQ0MjhjOGllaTdzanA2YjdnOHR2dHQ3YmMgbGFib3JhdG9yaWEubGFfdmhyMmowZ2VycTJvaWRmZm0xNGZvM3R1aW9AZw&ctz=America/Lima&sf=true">
           15 de Noviembre 2019
         </a>
       </h3>

@@ -44,6 +44,7 @@ export default ({ member, selected, setSelected }) => {
     <a
       className="Member"
       href={`https://github.com/${member}`}
+      title={member}
       onClick={(e) => {
         e.preventDefault();
         if (!selected) {
