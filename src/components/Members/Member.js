@@ -26,7 +26,7 @@ export default ({ member, selected, setSelected }) => {
       ctx.fillStyle = '#FF009E';
       ctx.fillRect(0, canvas.height - 30, canvas.width, canvas.height);
       ctx.fillStyle = '#fff';
-      ctx.fillText(`@${member.login}`, canvas.width / 2, canvas.height - (30 / 2));
+      ctx.fillText(`@${member}`, canvas.width / 2, canvas.height - (30 / 2));
     };
 
     const drawPixalated = () => {
@@ -37,17 +37,17 @@ export default ({ member, selected, setSelected }) => {
     };
 
     img.onload = selected ? draw : drawPixalated;
-    img.src = `${member.avatar_url}&size=160`;
+    img.src = `https://github.com/${member}.png?size=160`;
   }, [member, selected, canvasRef]);
 
   return (
     <a
       className="Member"
-      href={member.html_url}
+      href={`https://github.com/${member}`}
       onClick={(e) => {
         e.preventDefault();
         if (!selected) {
-          setSelected(member.id);
+          setSelected(member);
         } else {
           window.open(e.currentTarget.href);
         }

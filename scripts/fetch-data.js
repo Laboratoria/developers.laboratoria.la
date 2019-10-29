@@ -20,7 +20,7 @@ const run = async (config) => {
   const devsTeam = teams.find(({ slug }) => slug === 'developers');
   const devsTeamMembers = await fetchGitHubTeamMembers(octokit, devsTeam.id);
 
-  console.log(JSON.stringify(devsTeamMembers, null, 2));
+  console.log(JSON.stringify(devsTeamMembers.map(({ login }) => login), null, 2));
 };
 
 

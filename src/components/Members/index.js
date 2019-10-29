@@ -13,9 +13,9 @@ const Members = ({ members }) => {
       <div>
         {members && members.map(member => (
           <Member
-            key={member.id}
+            key={member}
             member={member}
-            selected={member.id === selected}
+            selected={member === selected}
             setSelected={setSelected}
           />
         ))}
