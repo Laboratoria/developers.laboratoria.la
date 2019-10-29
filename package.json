@@ -8,7 +8,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d dist",
+    "deploy": "yarn build && gh-pages -d build",
     "fetch-data": "node ./scripts/fetch-data.js > src/data/members.json"
   },
   "dependencies": {
