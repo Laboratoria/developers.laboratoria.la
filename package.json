@@ -1,22 +1,38 @@
 {
-  "name": "developers",
+  "name": "developers.laboratoria.la",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.1.0",
-    "react-dom": "^16.1.0",
-    "react-scripts": "2.1.5"
-  },
+  "homepage": "https://developers.laboratoria.la/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf docs && mv build docs",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d dist",
+    "fetch-data": "node ./scripts/fetch-data.js > src/data/members.json"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "^3.2.0"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^16.34.0",
+    "gh-pages": "^2.1.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

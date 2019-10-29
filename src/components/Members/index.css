@@ -1,0 +1,36 @@
+.Members {
+  flex-wrap: wrap;
+  background-color: #111;
+}
+
+.Members > h2 {
+  margin-bottom: 30px;
+}
+
+.Members > div {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.Member {
+  display: inline-block;
+  line-height: 0px;
+  padding: 3px;
+}
+
+.Member:hover {
+  text-decoration: none;
+}
+
+.Member canvas {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.Member canvas:hover,
+.Member canvas.selected {
+  filter: none;
+  -webkit-filter: none;
+  filter: none;
+}

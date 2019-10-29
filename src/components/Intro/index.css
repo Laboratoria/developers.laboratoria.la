@@ -1,0 +1,9 @@
+.Intro {
+  background-color: #444;
+}
+
+.Intro p {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+}

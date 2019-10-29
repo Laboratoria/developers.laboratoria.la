@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App header {
+  display: flex;
+  color: #666;
+}
+
+.App header img {
+  width: 60px;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+.App header h1 {
+  font-family: monospace;
+  margin-left: 10px;
+}

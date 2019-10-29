@@ -1,0 +1,8 @@
+.Calendar {
+  background-color: #333;
+}
+
+.Calendar > div {
+  max-width: 500px;
+  margin: auto;
+}

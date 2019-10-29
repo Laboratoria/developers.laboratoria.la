@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Open+Sans');
 
-html, body, a {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -9,13 +9,15 @@ body {
   /* background-color: #FF009E; */
   /* background-color: #FFE521; */
   /* background-color: #56F89A; */
-  /* background-color: #222; */
-  background-color: #fff;
+  background-color: #222;
   font-family: 'Open Sans', sans-serif;
-  color: #777;
-  padding: 5%;
-  max-width: 1240px;
-  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #ccc;
+}
+
+h1 {
+  font-size: 1.6em;
 }
 
 h1, h2 {
@@ -23,32 +25,29 @@ h1, h2 {
 }
 
 h2 {
-  margin: 24px 0;
+  margin: 0 0 20px;
+  color: #f0f0f0;
 }
 
 a {
   color: #FF009E;
   text-decoration: none;
+  border-radius: 4px;
+  outline: 0;
 }
 
 a:hover {
-  color: #ccc;
+  color: #fff;
   background-color: #FF009E;
 }
 
-
-canvas {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+section {
+  text-align: center;
+  padding: 10% 5%;
 }
 
-canvas:hover {
-  filter: none;
-  -webkit-filter: none;
-  filter: none;
+@media (min-width: 640px) {
+  section {
+    padding: 3%;
+  }
 }
-
-/* .resources a:hover {
-  background-color: transparent;
-} */
