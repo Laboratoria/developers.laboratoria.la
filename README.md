@@ -23,7 +23,7 @@ our [digital etiquette](https://github.com/Laboratoria/etiquette).
   - [Monthly hangouts](#monthly-hangouts)
   - [Pair programming](#pair-programming)
   - [Code review](#code-review)
-  - [Office Hourse](#office-hours)
+  - [Office Hours](#office-hours)
   - [Contributing](#contributing)
 * [Products](#products)
   - [Open Source](#open-source)
