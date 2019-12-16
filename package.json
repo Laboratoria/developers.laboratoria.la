@@ -8,17 +8,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build -r git@github.com:Laboratoria/developers.laboratoria.la.git",
     "fetch-data": "node ./scripts/fetch-data.js > src/data/members.json"
   },
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "^3.2.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
-    "@octokit/rest": "^16.34.0",
-    "gh-pages": "^2.1.1"
+    "@octokit/rest": "^16.35.2"
   },
   "eslintConfig": {
     "extends": "react-app"
