@@ -1,0 +1,24 @@
+name: Fetch data
+on:
+  schedule:
+    - cron: '0 14 * * 1' # Every monday 2pm UTC
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: yarn
+    - name: Fetch-data
+      run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} yarn fetch-data
+    - name: Add, commit and push
+      run: |
+        git checkout -b "members-update-$( date +%s )" develop
+        git add src/data/
+        git commit -m "chore(members): Updates members list based on Developers team on GitHub"
+        if [[ "$?" != "0" ]]; then
+          echo "No changes..."
+          exit 0;
+        else
+          git request-pull -p develop ./
+        fi
