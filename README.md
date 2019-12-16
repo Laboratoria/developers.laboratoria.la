@@ -125,9 +125,8 @@ book time with (via Slack). The following devs have offered themeselves to
 provide these _office hours_:
 
 * [@lupomontero](https://github.com/lupomontero)
-* [@FabianBravoA](https://github.com/FabianBravoA)
-* [@gmoura](https://github.com/gmoura)
 * [@xpktro](https://github.com/xpktro)
+* [@raulingg](https://github.com/raulingg)
 
 ### Contributing
 
@@ -144,16 +143,14 @@ for potential contributors.
 
 | Product |  Maintainers  | Description |
 |----------|-----------|-------------|
-| [curricula-js](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@merunga](https://github.com/merunga), [@rafaelbcerri](https://github.com/rafaelbcerri), [@gmoura](https://github.com/gmoura) | Bootcamp Curriculum (JavaScript).
-| [curricula-ux](https://github.com/Laboratoria/curricula-ux) | [@lalogf](https://github.com/lalogf) | Bootcamp Curriculum (UX).
+| [bootcamp](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@lalogf](https://github.com/lalogf), [@rafaelbcerri](https://github.com/rafaelbcerri) | Bootcamp Curriculum (JavaScript + UX).
 | [curriculum-parser](https://github.com/Laboratoria/curriculum-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLI tool used to parse curriculum topics and projects in Markdown format and produce a JSON representation to be later pushed to the _database_.
-| [schemas](https://github.com/Laboratoria/schemas) | [@lupomontero](https://github.com/lupomontero) | Mongoose _schemas_ describing shared entities. This _module_ is meant to be used both in Node.js and in the browser.
-| [models](https://github.com/Laboratoria/models) | [@lupomontero](https://github.com/lupomontero) | Mongoose _models_ based on `schemas`. This _module_ is meant to be used ONLY in Node.js. :warning: Does this need to be public?
-| [firemin](https://github.com/Laboratoria/firemin) | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features. This is mainly used to interact with `firestore` as the official `firebase` CLI tool doesn't include much functionality for `firestore`.
-| [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI) used in `curricula-js`.
-| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@gmoura](https://github.com/gmoura) | DevsChapter's _conventions_, guidelines and website.
-| [laboratoria-ui](https://github.com/Laboratoria/ui) | [@gmoura](https://github.com/gmoura) [@RuthMeryCardenas](https://github.com/RuthMeryCardenas) | It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.
-| [react-project-example](https://github.com/Laboratoria/react-project-example) | [@gmoura](https://github.com/gmoura) | It's our React Project example, based on [create-react-app](https://github.com/facebook/create-react-app) with some features that all projects in Laboratoria must/should be have.
+| [schemas](https://github.com/Laboratoria/schemas) | [@raulingg](https://github.com/raulingg) | Mongoose _schemas_ describing shared entities. This _module_ is meant to be used both in Node.js and in the browser.
+| [models](https://github.com/Laboratoria/models) | [@raulingg](https://github.com/raulingg) | Mongoose _models_ based on `schemas`. This _module_ is meant to be used ONLY in Node.js. :warning: Does this need to be public?
+| [firemin](https://github.com/Laboratoria/firemin) [DEPRECATED] | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features. This is mainly used to interact with `firestore` as the official `firebase` CLI tool doesn't include much functionality for `firestore`.
+| [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI) used in `bootcamp`.
+| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@bouli](https://github.com/bouli), [@raulingg](https://github.com/raulingg) | DevsChapter's _conventions_, guidelines and website.
+| [laboratoria-ui](https://github.com/Laboratoria/ui) | ? | It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.
 | [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | [@lupomontero](https://github.com/lupomontero) | CLI tool used to extract data from Google spreadsheets as JSON.
 
 ### Private repos
@@ -165,9 +162,9 @@ a single point of access for authentication and data from any of our apps. This
 app is currently hosted as [Firebase Cloud Functions](https://firebase.google.com/docs/functions/).
 
 * PM: [@bouli](https://github.com/bouli)
-* Tech lead: [@lupomontero](https://github.com/lupomontero)
-* Devs: [@xpktro](https://github.com/xpktro), [@MaiaRojas](https://github.com/MaiaRojas),
-  [@corosteg](https://github.com/corosteg)
+* Tech lead: [@raulingg](https://github.com/raulingg)
+* Devs: [@MaiaRojas](https://github.com/MaiaRojas),
+  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
 * Kanban: https://github.com/orgs/Laboratoria/projects/9
 * Tracker: https://github.com/Laboratoria/api.laboratoria.la/issues
 * API Docs: https://laboratoria.github.io/api.laboratoria.la/
@@ -180,8 +177,8 @@ students (both Bootcamp and L4B) in order to follow our different training
 programs.
 
 * PM: [@chamodev](https://github.com/chamodev)
-* Tech lead: [@xpktro](https://github.com/xpktro)
-* Devs: [@MaiaRojas](https://github.com/MaiaRojas), [@corosteg](https://github.com/corosteg)
+* Tech lead: ?
+* Devs: [@MaiaRojas](https://github.com/MaiaRojas), [@RuthMeryCardenas](https://github.com/RuthMeryCardenas), [@AnaSalazar](https://github.com/AnaSalazar)
   [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
 * URL: https://lms.laboratoria.la/
 
@@ -191,9 +188,9 @@ Job Placement App
 
 It's public website to show your graduate's profile to the hiring companies.
 
-* PM: [@andreamarianalm](https://github.com/andreamarianalm)
-* Tech lead: [@gmoura](https://github.com/gmoura)
-* Devs: [@rafaelbcerri](https://github.com/rafaelbcerri)
+* PM: [@gaposx](https://github.com/gaposx)
+* Tech lead: ?
+* Devs: [@AnaSalazar](https://github.com/AnaSalazar)
 * Kanban: https://github.com/Laboratoria/talento.laboratoria.la/projects/3
 * Tracker: https://github.com/Laboratoria/talento.laboratoria.la/issues
 * Architecture: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Architecture
@@ -205,13 +202,13 @@ It's public website to show your graduate's profile to the hiring companies.
 
 An application for applicants of Laboratoria to go through the admission process.
 
-* PM: [@danielasarzosa](https://github.com/danielasarzosa)
-* Tech lead: [@xpktro](https://github.com/xpktro)
+* PM: [@rocioalberdi](https://github.com/rocioalberdi)
+* Tech lead: [@raulingg](https://github.com/raulingg)
 * Devs: [@arku](https://github.com/arku)
 
 #### alumnae.laboratoria.la
 
-* PM: Franco???
+* PM: ?
 * Tech lead: [@FabianBravoA](https://github.com/FabianBravoA)
 * Devs: [@AnaSalazar](https://github.com/AnaSalazar)
 
