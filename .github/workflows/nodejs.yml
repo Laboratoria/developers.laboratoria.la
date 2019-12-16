@@ -18,15 +18,15 @@ jobs:
 
     - name: Install and test
       run: |
-        npm ci
-        npm test
+        yarn
+        yarn test
       env:
         CI: true
 
     - name: Build
       if: success() && github.ref == 'refs/heads/master'
       run: |
-        npm run build
+        yarn build
         echo ${{ secrets.DOMAIN_NAME}} > dist/CNAME
 
     - name: Deploy
