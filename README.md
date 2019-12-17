@@ -150,7 +150,7 @@ for potential contributors.
 | [firemin](https://github.com/Laboratoria/firemin) [DEPRECATED] | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features. This is mainly used to interact with `firestore` as the official `firebase` CLI tool doesn't include much functionality for `firestore`.
 | [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI) used in `bootcamp`.
 | [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@bouli](https://github.com/bouli), [@raulingg](https://github.com/raulingg) | DevsChapter's _conventions_, guidelines and website.
-| [laboratoria-ui](https://github.com/Laboratoria/ui) | ? | It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.
+| [laboratoria-ui](https://github.com/Laboratoria/ui) | [@lalogf](https://github.com/lalogf) | It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.
 | [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | [@lupomontero](https://github.com/lupomontero) | CLI tool used to extract data from Google spreadsheets as JSON.
 
 ### Private repos
@@ -164,11 +164,7 @@ app is currently hosted as [Firebase Cloud Functions](https://firebase.google.co
 * PM: [@bouli](https://github.com/bouli)
 * Tech lead: [@raulingg](https://github.com/raulingg)
 * Devs: [@MaiaRojas](https://github.com/MaiaRojas),
-  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
-* Kanban: https://github.com/orgs/Laboratoria/projects/9
-* Tracker: https://github.com/Laboratoria/api.laboratoria.la/issues
-* API Docs: https://laboratoria.github.io/api.laboratoria.la/
-* URL: https://api.laboratoria.la/
+  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas), [@arku](https://github.com/arku), [@AnaSalazar](https://github.com/AnaSalazar), [@lizzie136](https://github.com/lizzie136)
 
 #### [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
 
@@ -177,10 +173,8 @@ students (both Bootcamp and L4B) in order to follow our different training
 programs.
 
 * PM: [@chamodev](https://github.com/chamodev)
-* Tech lead: ?
-* Devs: [@MaiaRojas](https://github.com/MaiaRojas), [@RuthMeryCardenas](https://github.com/RuthMeryCardenas), [@AnaSalazar](https://github.com/AnaSalazar)
-  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
-* URL: https://lms.laboratoria.la/
+* Tech lead: [@MaiaRojas](https://github.com/MaiaRojas)
+* Devs: [@jaunjordan](https://github.com/jaunjordan), [@lupomontero](#)
 
 #### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
 
@@ -189,14 +183,8 @@ Job Placement App
 It's public website to show your graduate's profile to the hiring companies.
 
 * PM: [@gaposx](https://github.com/gaposx)
-* Tech lead: ?
-* Devs: [@AnaSalazar](https://github.com/AnaSalazar)
-* Kanban: https://github.com/Laboratoria/talento.laboratoria.la/projects/3
-* Tracker: https://github.com/Laboratoria/talento.laboratoria.la/issues
-* Architecture: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Architecture
-* Git Workflow: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Git-workflow
-* Stack: https://github.com/Laboratoria/talento.laboratoria.la/wiki/Stack
-* URL: https://app.talento.laboratoria.la/
+* Tech lead: [@AnaSalazar](https://github.com/AnaSalazar)
+* Devs: [@RuthMeryCardenas](https://github.com/RuthMeryCardenas)
 
 #### [admission.laboratoria.la](https://github.com/Laboratoria/admission.laboratoria.la)
 
@@ -206,21 +194,17 @@ An application for applicants of Laboratoria to go through the admission process
 * Tech lead: [@raulingg](https://github.com/raulingg)
 * Devs: [@arku](https://github.com/arku)
 
-#### alumnae.laboratoria.la
+#### [aprende.laboratoria.la](https://github.com/Laboratoria/aprende.laboratoria.la) (Corporate Training)
 
-* PM: ?
-* Tech lead: [@FabianBravoA](https://github.com/FabianBravoA)
-* Devs: [@AnaSalazar](https://github.com/AnaSalazar)
+* PM: [@danijc60s](https://github.com/danijc60s)
+* Tech lead: [@arku](https://github.com/arku)
+* Devs: [@lizzie136](#)
 
 #### [laboratoria-admin](https://github.com/Laboratoria/admin)
 
 CLI tool used for amdin tasks related to API and LMS.
 
 * Tech lead: [@lupomontero](https://github.com/lupomontero)
-
-#### L4B???
-
-* PM: [@claudiaalf](https://github.com/claudiaalf)
 
 #### www.laboratoria.la
 
