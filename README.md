@@ -124,8 +124,7 @@ book time with (via Slack). The following devs have offered themeselves to
 provide these _office hours_:
 
 * [@lupomontero](https://github.com/lupomontero)
-* [@xpktro](https://github.com/xpktro)
-* [@raulingg](https://github.com/raulingg)
+* [@arku](https://github.com/arku)
 
 ### Contributing
 
@@ -144,11 +143,9 @@ for potential contributors.
 |----------|-----------|-------------|
 | [bootcamp](https://github.com/Laboratoria/curricula-js) | [@lupomontero](https://github.com/lupomontero), [@lalogf](https://github.com/lalogf), [@rafaelbcerri](https://github.com/rafaelbcerri) | Bootcamp Curriculum (JavaScript + UX).
 | [curriculum-parser](https://github.com/Laboratoria/curriculum-parser) | [@lupomontero](https://github.com/lupomontero), [@MaiaRojas](https://github.com/MaiaRojas) | CLI tool used to parse curriculum topics and projects in Markdown format and produce a JSON representation to be later pushed to the _database_.
-| [schemas](https://github.com/Laboratoria/schemas) | [@raulingg](https://github.com/raulingg) | Mongoose _schemas_ describing shared entities. This _module_ is meant to be used both in Node.js and in the browser.
-| [models](https://github.com/Laboratoria/models) | [@raulingg](https://github.com/raulingg) | Mongoose _models_ based on `schemas`. This _module_ is meant to be used ONLY in Node.js. :warning: Does this need to be public?
 | [firemin](https://github.com/Laboratoria/firemin) [DEPRECATED] | [@lupomontero](https://github.com/lupomontero) | Firebase/Firestore extra CLI features. This is mainly used to interact with `firestore` as the official `firebase` CLI tool doesn't include much functionality for `firestore`.
 | [mdlint](https://github.com/Laboratoria/mdlint) | [@lupomontero](https://github.com/lupomontero) | Markdown linter (CLI) used in `bootcamp`.
-| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@bouli](https://github.com/bouli), [@raulingg](https://github.com/raulingg) | DevsChapter's _conventions_, guidelines and website.
+| [developers.laboratoria.la](https://github.com/Laboratoria/developers.laboratoria.la) | [@lupomontero](https://github.com/lupomontero), [@bouli](https://github.com/bouli) | DevsChapter's _conventions_, guidelines and website.
 | [laboratoria-ui](https://github.com/Laboratoria/ui) | [@lalogf](https://github.com/lalogf) | It's our React Components library, extended from [Material-UI](https://material-ui.com/). The proposal is to standardize our components and Laboratoria's brand in our products.
 | [fetch-gsheets](https://github.com/Laboratoria/fetch-gsheets) | [@lupomontero](https://github.com/lupomontero) | CLI tool used to extract data from Google spreadsheets as JSON.
 
@@ -161,9 +158,9 @@ a single point of access for authentication and data from any of our apps. This
 app is currently hosted as [Firebase Cloud Functions](https://firebase.google.com/docs/functions/).
 
 * PM: [@bouli](https://github.com/bouli)
-* Tech lead: [@raulingg](https://github.com/raulingg)
+* Tech lead: [@arku](https://github.com/arku)
 * Devs: [@MaiaRojas](https://github.com/MaiaRojas),
-  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas), [@arku](https://github.com/arku), [@AnaSalazar](https://github.com/AnaSalazar), [@lizzie136](https://github.com/lizzie136)
+  [@RuthMeryCardenas](https://github.com/RuthMeryCardenas), [@AnaSalazar](https://github.com/AnaSalazar)
 
 #### [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
 
@@ -171,9 +168,8 @@ Learning Management System (LMS). This is the main web interface used by our
 students (both Bootcamp and L4B) in order to follow our different training
 programs.
 
-* PM: [@chamodev](https://github.com/chamodev)
+* PM: [@diegovelezg](https://github.com/diegovelezg)
 * Tech lead: [@MaiaRojas](https://github.com/MaiaRojas)
-* Devs: [@jaunjordan](https://github.com/jaunjordan), [@lupomontero](#)
 
 #### [talento.laboratoria.la](https://github.com/Laboratoria/talento.laboratoria.la)
 
@@ -190,14 +186,12 @@ It's public website to show your graduate's profile to the hiring companies.
 An application for applicants of Laboratoria to go through the admission process.
 
 * PM: [@rocioalberdi](https://github.com/rocioalberdi)
-* Tech lead: [@raulingg](https://github.com/raulingg)
-* Devs: [@arku](https://github.com/arku)
+* Devs: [@arku](https://github.com/arku), [@MaiaRojas](https://github.com/MaiaRojas)
 
 #### [aprende.laboratoria.la](https://github.com/Laboratoria/aprende.laboratoria.la) (Corporate Training)
 
 * PM: [@danijc60s](https://github.com/danijc60s)
 * Tech lead: [@arku](https://github.com/arku)
-* Devs: [@lizzie136](#)
 
 #### [laboratoria-admin](https://github.com/Laboratoria/admin)
 
@@ -229,10 +223,10 @@ TDD, and if it can be a _pure function_, it must be one.
 
 ### Backend
 
-* [Firebase](https://firebase.google.com/) (hosting)
+* [Firebase Auth](https://firebase.google.com/) (Authentication)
 * [Firebase functions](https://firebase.google.com/docs/functions/) (hosting)
-* [Firestore](https://firebase.google.com/docs/firestore/) (database)
 * MongoDB / Atlas
+* Mongoose
 * Express
 
 ### Frontend
@@ -241,13 +235,21 @@ In [this blog post](https://medium.com/laboratoria-developers/arquitectura-de-in
 you can find a description of the basic **JavaScript stack** we use in the
 front-end (article is in spanish).
 
+__Core__
+
+* [React](https://reactjs.org/)
+* [Material UI](https://material-ui.com/)
 * [Babel](https://babeljs.io/)
 * [Webpack](https://webpack.js.org/)
-* [Redux](https://redux.js.org/)
-* [React](https://reactjs.org/)
-* [Material UI](https://material-ui.com/) ????
-* `create-react-app` ???
-* Boilerplate ???
+* [create-react-app](https://create-react-app.dev/docs/getting-started/) ?? used by lms and admission
+
+__Other libraries__
+
+* [react-query](https://react-query.tanstack.com/), for managing and caching data from servers
+* [Redux](https://redux.js.org/), for managing state
+* [react-hook-form](https://react-hook-form.com/), for building forms
+* [react-intl](https://formatjs.io/docs/react-intl/) Internationalisation and localisation
+
 
 ### Testing, building and CI
 
@@ -300,20 +302,17 @@ Make sure your `package.json` includes a `pretest` _script_ (as in
 
 [Jest](https://jestjs.io/)
 
+#### Integration tests
+
+* [cypress](https://www.cypress.io/)
+* jest & supertest & mongodb-memory-server
+
 #### Continuous Integration
 
-[Travis CI](https://travis-ci.org/)
+* [GitHub Actions](https://github.com/features/actions) 
+* [Travis CI](https://travis-ci.org/)
 
-`.travis.yml`
-
-```yml
-language: node_js
-node_js:
-  - 8
-  - 10
-```
-
-Status badge
+_Note_ product developers have started swapping to Github Actions
 
 #### Code coverage
 
@@ -330,6 +329,8 @@ Coveralls??
 * TypeForm
 * Spreadsheets
 * Mandrill
+* Mailchimp
+* Bigquery
 * ...
 
 ***
@@ -354,8 +355,6 @@ yarn add -D eslint eslint-config-airbnb-base eslint-plugin-import
 
 ### Node.js
 
-`v8` vs `v10`
-
 `require` vs `import` ???
 
 Package manager? `yarn` vs `npm` ???
@@ -370,11 +369,7 @@ Package manager? `yarn` vs `npm` ???
 
 [`airbnb/css`](https://github.com/airbnb/css)
 
-JSS??? Styled Components???
-
-### HTML
-
-???
+css-in-js
 
 ### Shell
 
@@ -384,7 +379,12 @@ Bash???
 
 ## Git Workflow
 
-Git Hooks?? Husky? @gmoura???
+* commitizen
+* husky
+* lint-staged
+* semantic-release
+
+_Note_ the above tools are used by [admission.laboratoria.la](https://github.com/Laboratoria/admission.laboratoria.la) and [lms.laboratoria.la](https://github.com/Laboratoria/lms.laboratoria.la)
 
 See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
@@ -392,23 +392,19 @@ See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ## Dependency management
 
-When and how to upgrade deps.
-
-Semver (`^`, `~` and pinning deps).
-
-`npm` vs `yarn`
-
-Lock files (when to add to git and when not to).
+* [Dependabot](https://dependabot.com/)
 
 ***
 
 ## Internationalisation, localisaion and translation
 
-`react-intl`
+* [react-intl](https://formatjs.io/docs/react-intl/) 
 
 ***
 
 ## Releases
+
+Manual releases vs automated releases ?? [semantic-release](https://github.com/semantic-release/semantic-release) ??
 
 We aim to use Git, GitHub, NPM and Travis for all (or most) repos, and our
 release process relies heavily on these. By this we mean that releases MUST:
@@ -524,54 +520,27 @@ protection as well as free SSL and other useful features.
 
 ### Node.js modules and CLI tools
 
-For the time being we are using GitHub releases for our `npm` _modules_ and CLI
-tools. This means that modules can be installed via
-`npm i Laboratoria/repo-name#tag`, or adding to your `package.json`.
-
-Example as dependency in `package.json`:
-
-```json
-{
-  "dependencies": {
-    "schemas": "Laboratoria/schemas#v1.0.0-alpha.3"
-  }
-}
-```
-
-Example installing the `curriculum-parser` globally:
-
-```sh
-# install current release
-npm i -g Laboratoria/curriculum-parser
-
-# install a specific version
-npm i -g "Laboratoria/curriculum-parser#v2.0.0-alpha.2"
-```
-
-GitHub vs NPM Orgs???
+@lupomontero ??
 
 ### Node.js Servers
 
-Zeit.co vs Docker vs VM
+* Vercel, Netlify, Heroku ??
 
 talento.laboratoria.la y api-next???
 
 ### Cloud functions
 
-Firebase functions
+* [Firebase functions](https://firebase.google.com/docs/functions)
+* Vercel, Netlify ??
 
 ### Static hosting
 
 * Firebase hosting
-* ...
+* Vercel, Netlify ??
 
 ### Databases
 
-Firestore
-
-MongoDB
-
-Atlas vs Docker vs VM
+MongoDB/ MongoAtlas
 
 ### Continuous delivery
 
