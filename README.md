@@ -124,6 +124,8 @@ book time with (via Slack). The following devs have offered themeselves to
 provide these _office hours_:
 
 * [@lupomontero](https://github.com/lupomontero)
+* [@merunga](https://github.com/merunga)
+* [@raulingg](https://github.com/raulingg)
 * [@arku](https://github.com/arku)
 
 ### Contributing
