@@ -1,5 +1,7 @@
 # Laboratoria Developers Chapter
 
+![Node CI](https://github.com/Laboratoria/developers.laboratoria.la/workflows/Node%20CI/badge.svg)
+
 **The Developers Chapter at Laboratoria is a community made up of all the
 developers within the organisation**. That includes any Laboratorian that fits the
 developer profile: _developers_ working on software products, _coaches_, ...
@@ -311,7 +313,7 @@ Make sure your `package.json` includes a `pretest` _script_ (as in
 
 #### Continuous Integration
 
-* [GitHub Actions](https://github.com/features/actions) 
+* [GitHub Actions](https://github.com/features/actions)
 * [Travis CI](https://travis-ci.org/)
 
 _Note_ product developers have started swapping to Github Actions
@@ -400,7 +402,7 @@ See [GIT_WORKFLOW.md](./GIT_WORKFLOW.md).
 
 ## Internationalisation, localisaion and translation
 
-* [react-intl](https://formatjs.io/docs/react-intl/) 
+* [react-intl](https://formatjs.io/docs/react-intl/)
 
 ***
 
