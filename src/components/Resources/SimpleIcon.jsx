@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SimpleIcon = ({ profile }) => (
   <img
     className="SimpleIcon"

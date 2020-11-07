@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Member from './Member';
 import Emoji from '../Emoji';
 import './index.css';
-
 
 const Members = ({ members }) => {
   const [selected, setSelected] = useState(null);
@@ -23,6 +22,5 @@ const Members = ({ members }) => {
     </section>
   );
 };
-
 
 export default Members;

@@ -1,6 +1,4 @@
-import React from 'react';
 import './index.css';
-
 
 const Intro = () => (
   <section className="Intro">
@@ -22,6 +20,5 @@ const Intro = () => (
     </p>
   </section>
 );
-
 
 export default Intro;

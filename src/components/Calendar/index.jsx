@@ -1,7 +1,5 @@
-import React from 'react';
 import Emoji from '../Emoji';
 import './index.css';
-
 
 const Calendar = () => (
   <section className="Calendar">
@@ -35,6 +33,5 @@ const Calendar = () => (
     </div>
   </section>
 );
-
 
 export default Calendar;

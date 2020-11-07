@@ -1,8 +1,6 @@
-import React from 'react';
 import SimpleIcon from './SimpleIcon';
 import Emoji from '../Emoji';
 import './index.css';
-
 
 const profiles = [
   {
@@ -27,7 +25,6 @@ const profiles = [
   }
 ];
 
-
 const Resources = props => (
   <section className="Resources">
     <h2><Emoji symbol={'📚'} /> Recursos</h2>
@@ -43,6 +40,5 @@ const Resources = props => (
     ))}
   </section>
 );
-
 
 export default Resources;

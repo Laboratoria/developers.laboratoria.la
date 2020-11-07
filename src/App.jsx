@@ -1,11 +1,9 @@
-import React from 'react';
 import logo from './img/logo.svg';
 import Intro from './components/Intro';
 import Calendar from './components/Calendar';
 import Resources from './components/Resources';
 import Members from './components/Members';
 import './App.css';
-
 
 const App = ({ members }) => (
   <main className="App">
@@ -19,6 +17,5 @@ const App = ({ members }) => (
     <Members members={members} />
   </main>
 );
-
 
 export default App;
