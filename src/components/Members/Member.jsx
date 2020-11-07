@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 
 
-export default ({ member, selected, setSelected }) => {
+const Member = ({ member, selected, setSelected }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -63,3 +63,5 @@ export default ({ member, selected, setSelected }) => {
     </a>
   );
 };
+
+export default Member;
