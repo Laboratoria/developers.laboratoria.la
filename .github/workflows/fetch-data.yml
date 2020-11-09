@@ -13,12 +13,12 @@ jobs:
       run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} yarn fetch-data
     - name: Add, commit and push
       run: |
-        git checkout -b "members-update-$( date +%s )" develop
+        git checkout -b "members-update-$( date +%s )" main
         git add src/data/
         git commit -m "chore(members): Updates members list based on Developers team on GitHub"
         if [[ "$?" != "0" ]]; then
           echo "No changes..."
           exit 0;
         else
-          git request-pull -p develop ./
+          git request-pull -p main ./
         fi
