@@ -24,13 +24,13 @@ jobs:
         CI: true
 
     - name: Build
-      if: success() && github.ref == 'refs/heads/master'
+      if: success() && github.ref == 'refs/heads/main'
       run: |
         yarn build
         echo ${{ secrets.DOMAIN_NAME}} > build/CNAME
 
     - name: Deploy
-      if: success() && github.ref == 'refs/heads/master'
+      if: success() && github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v2
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
