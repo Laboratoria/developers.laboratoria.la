@@ -11,10 +11,10 @@ const profiles = [
     provider: 'slack',
     url: 'https://laboratoriala.slack.com/messages/C7TE6F4G7/',
   },
-  {
-    provider: 'discourse',
-    url: 'http://community.laboratoria.la/',
-  },
+  // {
+  //   provider: 'discourse',
+  //   url: 'http://community.laboratoria.la/',
+  // },
   {
     provider: 'medium',
     url: 'https://medium.com/laboratoria-developers',
